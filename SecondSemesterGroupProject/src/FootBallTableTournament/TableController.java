@@ -10,6 +10,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 
+import javax.swing.*;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
@@ -24,6 +25,7 @@ public class TableController {
 
     int choice = CreatePageController.choice;
     int limit=0;
+    boolean duplicatePrevention = true;
     String nameOfTournament = CreatePageController.nameOfTournament;
 
     @FXML
@@ -62,15 +64,40 @@ public class TableController {
     @FXML
     private TableColumn<TableController, String> Team;
 
-        @FXML
-        void LoadPlayerOnTable(ActionEvent event) {
+    void ErrorMessage() //The dialogue box method
+    {
+        JOptionPane.showMessageDialog(null,
+                "You have entered the wrong data type \n"
+                        + "into the Date of birth field \n"
+                        + "Please enter an integer(mmddyy)",
+                "NOW YOU FUCKED UP",
+                JOptionPane.ERROR_MESSAGE);
+        duplicatePrevention = false;
+    }
+    public String p1dob;
+    public String p2dob;
+    void parseShit() //Checks entered DOB values are integers
+    {
+        Double.parseDouble(p1dob);
+        Double.parseDouble(p2dob);
+    }
+    @FXML
+    void LoadPlayerOnTable(ActionEvent event) {
         String p1name = NameP1.getText();
         String p2name = NameP2.getText();
         String p1email = EmailP1.getText();
         String p2email = EmailP2.getText();
-        String p1dob = DOBp1.getText();
-        String p2dob = DOBp2.getText();
-        if(limit<choice) {
+        p1dob= DOBp1.getText();
+        p2dob= DOBp2.getText();
+        try{
+            parseShit();
+            duplicatePrevention = true;
+        }
+        catch (NumberFormatException nfe){
+            ErrorMessage();
+        }
+
+        if(limit<choice && duplicatePrevention == true) {
             try {
                 String sql = "INSERT INTO `" + nameOfTournament + "_players` VALUES ('" + p1name + "' ," + p1dob + ", '" + p1email + "', NULL)";
                 String mySql = "INSERT INTO `" + nameOfTournament + "_players` VALUES ('" + p2name + "' ," + p2dob + ", '" + p2email + "', NULL)";
@@ -98,43 +125,43 @@ public class TableController {
             EmailP2.setText("No more Players");
             DOBp1.setText("No more Players");
             DOBp2.setText("No more Players");}
+    }
+
+    @FXML
+    void CommitToDB(ActionEvent event) {
+
+    }
+
+    @FXML
+    void DeleteTableContentPlayer(ActionEvent event) {
+
+    }
+
+    @FXML
+    void UpdateTableContentMatch(ActionEvent event) {
+
+    }
+
+    @FXML
+    void DeleteTableContentMatch(ActionEvent event) {
+
+    }
+
+    @FXML
+    void DispaySchedule(ActionEvent event) {
+
+        //if 4team condition is satisfied, launch 4team schedule
+        if(choice == 4) {
+            scene.openWindow(event,"fourTeamSchedule.fxml","4-Team Tournament!",600,217 );
         }
-
-        @FXML
-        void CommitToDB(ActionEvent event) {
-
+        if(choice == 6) {
+            scene.openWindow(event,"sixTeamSchedule.fxml","6-Team Tournament!",525,280 );
         }
-
-        @FXML
-        void DeleteTableContentPlayer(ActionEvent event) {
-
+        if(choice == 8) {
+            scene.openWindow(event,"eightTeamSchedule.fxml","8-Team Tournament",700,340 );
         }
-
-        @FXML
-        void UpdateTableContentMatch(ActionEvent event) {
-
+        if(choice == 10) {
+            scene.openWindow(event,"tenTeamSchedule.fxml","10-Team Tournament",900,400 );
         }
-
-        @FXML
-        void DeleteTableContentMatch(ActionEvent event) {
-
-        }
-
-        @FXML
-        void DispaySchedule(ActionEvent event) {
-
-            //if 4team condition is satisfied, launch 4team schedule
-            if(choice == 4) {
-                scene.openWindow(event,"fourTeamSchedule.fxml","4-Team Tournament!",600,217 );
-            }
-            if(choice == 6) {
-                scene.openWindow(event,"sixTeamSchedule.fxml","6-Team Tournament!",525,280 );
-            }
-            if(choice == 8) {
-                scene.openWindow(event,"eightTeamSchedule.fxml","8-Team Tournament",700,340 );
-            }
-            if(choice == 10) {
-                scene.openWindow(event,"tenTeamSchedule.fxml","10-Team Tournament",900,400 );
-            }
-        }
-        }
+    }
+}
