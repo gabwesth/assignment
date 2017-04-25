@@ -1,17 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.*?>
-<?import java.lang.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
 
-<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="394.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FootBallTableTournament.UsePageMenuController">
-   <children>
-      <Pane prefHeight="238.0" prefWidth="473.0">
-          <children>
-            <Button fx:id="StandingsBtt" layoutX="80.0" layoutY="87.0" mnemonicParsing="false" text="Standings" />
-            <Button fx:id="ResultsBtt" layoutX="411.0" layoutY="87.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="85.0" text="Results" />
-            <Button fx:id="ScheduleBtt" layoutX="80.0" layoutY="283.0" mnemonicParsing="false" onAction="#loadScheadule" prefHeight="31.0" prefWidth="85.0" text="Schedule" />
-            <Button fx:id="BackBtt" layoutX="411.0" layoutY="283.0" mnemonicParsing="false" onAction="#getMenu" prefHeight="31.0" prefWidth="85.0" text="Back" />
-          <children>
-   </children>
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="394.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FootBallTableTournament.UsePageMenuController">
+    <children>
+        <Pane prefHeight="238.0" prefWidth="473.0">
+            <children>
+                <Button fx:id="StandingsBtt" layoutX="50.0" layoutY="50.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="85.0" text="Standings" />
+                <Button fx:id="ResultsBtt" layoutX="262.0" layoutY="50.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="85.0" text="Results" />
+                <Button fx:id="ScheduleBtt" layoutX="50.0" layoutY="162.0" mnemonicParsing="false" onAction="#loadScheadule" prefHeight="31.0" prefWidth="85.0" text="Schedule" />
+                <Button fx:id="BackBtt" layoutX="262.0" layoutY="162.0" mnemonicParsing="false" onAction="#goBack" prefHeight="31.0" prefWidth="85.0" text="Back" />
+            </children>
+        </Pane>
+    </children>
 </StackPane>
