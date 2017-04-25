@@ -25,21 +25,11 @@ public class TableController {
 
     int choice = CreatePageController.choice;
     int limit=0;
-    boolean duplicatePrevention = true;
+    boolean duplicatePrevention = true; //Used in errorMessage and parseShit methods to prevent duplicate information being entered into table
     String nameOfTournament = CreatePageController.nameOfTournament;
 
     @FXML
-    private TextField EmailP2;
-    @FXML
-    private TextField EmailP1;
-    @FXML
-    private TextField NameP2;
-    @FXML
-    private TextField NameP1;
-    @FXML
-    private TextField DOBp2;
-    @FXML
-    private TextField DOBp1;
+    private TextField EmailP2; @FXML private TextField EmailP1;@FXML private TextField NameP2;@FXML private TextField NameP1;@FXML private TextField DOBp2;@FXML private TextField DOBp1;
 
     @FXML
     private Button ShowShedulBtt;
@@ -64,13 +54,13 @@ public class TableController {
     @FXML
     private TableColumn<TableController, String> Team;
 
-    void ErrorMessage() //The dialogue box method
+    void ErrorMessage() //The errordialogue box method
     {
         JOptionPane.showMessageDialog(null,
                 "You have entered the wrong data type \n"
                         + "into the Date of birth field \n"
                         + "Please enter an integer(mmddyy)",
-                "NOW YOU FUCKED UP",
+                "YOU FUCKED UP",
                 JOptionPane.ERROR_MESSAGE);
         duplicatePrevention = false;
     }

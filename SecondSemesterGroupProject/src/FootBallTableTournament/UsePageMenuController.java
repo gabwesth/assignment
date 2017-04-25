@@ -18,13 +18,13 @@ public class UsePageMenuController {
     String tour = UsePageController.tour;
 
     @FXML
-    private Button ScheduleBtt;
+    private Button ScheduleBtt; //Ability to add results
     @FXML
     private Button BackBtt;
     @FXML
-    private Button ResultsBtt;
+    private Button infoBtt; //Shows a list of teams that can be clicked on to display team info
     @FXML
-    private Button StandingBtt;
+    private Button StandingBtt; //Dialogue box/popup that shows a table of all teams and their GD, pts, and position
 
     public void goBack(ActionEvent event){
         scene.openWindowAndClose(event,"UsePage.fxml","Select Tournament", 394, 251 );
