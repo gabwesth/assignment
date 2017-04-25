@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.Pane?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="339.0" prefWidth="698.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FootBallTableTournament.eightTeamController">
+   <children>
+      <Label layoutY="20.0" text="Round 1" />
+      <Label layoutX="100.0" layoutY="20.0" text="Round 2" />
+      <Label layoutX="200.0" layoutY="20.0" text="Round 3" />
+      <Label layoutX="300.0" layoutY="20.0" text="Round 4" />
+      <Label layoutX="400.0" layoutY="20.0" text="Round 5" />
+      <Label layoutY="55.0" prefHeight="20.0" prefWidth="52.0" text="1v2" textAlignment="CENTER" />
+      <Label layoutY="130.0" prefHeight="20.0" prefWidth="52.0" text="3v8" />
+      <Label layoutY="200.0" prefHeight="20.0" prefWidth="52.0" text="4v7" />
+      <Label layoutX="100.0" layoutY="55.0" prefHeight="20.0" prefWidth="52.0" text="1v7" />
+      <Label layoutX="100.0" layoutY="130.0" prefHeight="20.0" prefWidth="52.0" text="3v4" />
+      <Label layoutX="100.0" layoutY="200.0" prefHeight="20.0" prefWidth="52.0" text="2v5" />
+      <Label layoutX="200.0" layoutY="55.0" prefHeight="20.0" prefWidth="52.0" text="1v4" />
+      <Label layoutX="200.0" layoutY="130.0" prefHeight="20.0" prefWidth="52.0" text="3v5" />
+      <Label layoutX="200.0" layoutY="200.0" prefHeight="20.0" prefWidth="52.0" text="2v6" />
+      <Label layoutX="300.0" layoutY="55.0" prefHeight="20.0" prefWidth="52.0" text="1v6" />
+      <Label layoutX="300.0" layoutY="130.0" prefHeight="20.0" prefWidth="52.0" text="3v2" />
+      <Label layoutX="300.0" layoutY="200.0" prefHeight="20.0" prefWidth="52.0" text="4v8" />
+      <Label layoutX="400.0" layoutY="55.0" prefHeight="20.0" prefWidth="52.0" text="1v3" />
+      <Label layoutX="400.0" layoutY="130.0" prefHeight="20.0" prefWidth="52.0" text="5v8" />
+      <Label layoutX="400.0" layoutY="200.0" prefHeight="20.0" prefWidth="52.0" text="4v2" />
+      <Label layoutX="500.0" layoutY="20.0" text="Round 6" />
+      <Label layoutX="600.0" layoutY="20.0" text="Round 7" />
+      <Label layoutY="270.0" prefHeight="20.0" prefWidth="52.0" text="5v6" />
+      <Label layoutX="100.0" layoutY="270.0" prefHeight="20.0" prefWidth="52.0" text="8v6" />
+      <Label layoutX="200.0" layoutY="270.0" prefHeight="20.0" prefWidth="52.0" text="7v8" />
+      <Label layoutX="300.0" layoutY="270.0" prefHeight="20.0" prefWidth="52.0" text="7v5" />
+      <Label layoutX="400.0" layoutY="270.0" prefHeight="20.0" prefWidth="52.0" text="7v6" />
+      <Label layoutX="500.0" layoutY="270.0" prefHeight="20.0" prefWidth="52.0" text="4v5" />
+      <Label layoutX="500.0" layoutY="200.0" prefHeight="20.0" prefWidth="52.0" text="2v7" />
+      <Label layoutX="500.0" layoutY="130.0" prefHeight="20.0" prefWidth="52.0" text="3v6" />
+      <Label layoutX="500.0" layoutY="55.0" prefHeight="20.0" prefWidth="52.0" text="1v8" />
+      <Label layoutX="600.0" layoutY="55.0" prefHeight="20.0" prefWidth="52.0" text="1v5" />
+      <Label layoutX="600.0" layoutY="130.0" prefHeight="20.0" prefWidth="52.0" text="3v7" />
+      <Label layoutX="600.0" layoutY="200.0" prefHeight="20.0" prefWidth="52.0" text="4v6" />
+      <Label layoutX="600.0" layoutY="270.0" prefHeight="20.0" prefWidth="52.0" text="2v8" />
+      <Button fx:id="Save8Button" layoutX="636.0" layoutY="302.0" mnemonicParsing="false" text="Save" />
+      <TextField fx:id="r1" layoutX="26.0" layoutY="48.0" prefHeight="30.0" prefWidth="70.0" promptText="result" />
+      <Label layoutX="277.0" layoutY="307.0" opacity="0.53" text="Enter Results (int, int)" />
+      <TextField fx:id="r12" layoutX="26.0" layoutY="123.0" prefHeight="30.0" prefWidth="70.0" promptText="result" />
+      <TextField fx:id="r13" layoutX="26.0" layoutY="193.0" prefHeight="30.0" prefWidth="70.0" promptText="result" />
+      <TextField fx:id="r14" layoutX="26.0" layoutY="263.0" prefHeight="30.0" prefWidth="70.0" promptText="result" />
+      <TextField fx:id="r24" layoutX="126.0" layoutY="263.0" prefHeight="30.0" prefWidth="70.0" promptText="result" />
+      <TextField fx:id="r23" layoutX="126.0" layoutY="193.0" prefHeight="30.0" prefWidth="70.0" promptText="result" />
+      <TextField fx:id="r22" layoutX="126.0" layoutY="123.0" prefHeight="30.0" prefWidth="70.0" promptText="result" />
+      <TextField fx:id="r2" layoutX="126.0" layoutY="48.0" prefHeight="30.0" prefWidth="70.0" promptText="result" />
+      <TextField fx:id="r34" layoutX="226.0" layoutY="263.0" prefHeight="30.0" prefWidth="70.0" promptText="result" />
+      <TextField fx:id="r33" layoutX="226.0" layoutY="193.0" prefHeight="30.0" prefWidth="70.0" promptText="result" />
+      <TextField fx:id="r32" layoutX="226.0" layoutY="123.0" prefHeight="30.0" prefWidth="70.0" promptText="result" />
+      <TextField fx:id="r3" layoutX="226.0" layoutY="48.0" prefHeight="30.0" prefWidth="70.0" promptText="result" />
+      <TextField fx:id="r44" layoutX="326.0" layoutY="262.0" prefHeight="30.0" prefWidth="70.0" promptText="result" />
+      <TextField fx:id="r43" layoutX="326.0" layoutY="192.0" prefHeight="30.0" prefWidth="70.0" promptText="result" />
+      <TextField fx:id="r42" layoutX="326.0" layoutY="122.0" prefHeight="30.0" prefWidth="70.0" promptText="result" />
+      <TextField fx:id="r4" layoutX="326.0" layoutY="47.0" prefHeight="30.0" prefWidth="70.0" promptText="result" />
+      <TextField fx:id="r54" layoutX="426.0" layoutY="262.0" prefHeight="30.0" prefWidth="70.0" promptText="result" />
+      <TextField fx:id="r53" layoutX="426.0" layoutY="192.0" prefHeight="30.0" prefWidth="70.0" promptText="result" />
+      <TextField fx:id="r52" layoutX="426.0" layoutY="122.0" prefHeight="30.0" prefWidth="70.0" promptText="result" />
+      <TextField fx:id="r5" layoutX="426.0" layoutY="47.0" prefHeight="30.0" prefWidth="70.0" promptText="result" />
+      <TextField fx:id="r64" layoutX="526.0" layoutY="263.0" prefHeight="30.0" prefWidth="70.0" promptText="result" />
+      <TextField fx:id="r63" layoutX="526.0" layoutY="193.0" prefHeight="30.0" prefWidth="70.0" promptText="result" />
+      <TextField fx:id="r62" layoutX="525.0" layoutY="122.0" prefHeight="30.0" prefWidth="70.0" promptText="result" />
+      <TextField fx:id="r6" layoutX="525.0" layoutY="47.0" prefHeight="30.0" prefWidth="70.0" promptText="result" />
+      <TextField fx:id="r74" layoutX="625.0" layoutY="262.0" prefHeight="30.0" prefWidth="70.0" promptText="result" />
+      <TextField fx:id="r73" layoutX="625.0" layoutY="192.0" prefHeight="30.0" prefWidth="70.0" promptText="result" />
+      <TextField fx:id="r72" layoutX="625.0" layoutY="122.0" prefHeight="30.0" prefWidth="70.0" promptText="result" />
+      <TextField fx:id="r7" layoutX="625.0" layoutY="47.0" prefHeight="30.0" prefWidth="70.0" promptText="result" />
+   </children>
+</Pane>
