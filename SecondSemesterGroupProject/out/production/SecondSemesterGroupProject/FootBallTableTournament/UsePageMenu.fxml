@@ -4,12 +4,12 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.StackPane?>
 
-<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="394.0" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FootBallTableTournament.UsePageMenuController">
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="394.0" xmlns="http://javafx.com/javafx/8.0.101" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FootBallTableTournament.UsePageMenuController">
     <children>
         <Pane prefHeight="238.0" prefWidth="473.0">
             <children>
                 <Button fx:id="StandingsBtt" layoutX="50.0" layoutY="50.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="85.0" text="Standings" />
-                <Button fx:id="ResultsBtt" layoutX="262.0" layoutY="50.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="85.0" text="Results" />
+                <Button fx:id="infoBtt" layoutX="262.0" layoutY="50.0" mnemonicParsing="false" prefHeight="31.0" prefWidth="85.0" text="Info" />
                 <Button fx:id="ScheduleBtt" layoutX="50.0" layoutY="162.0" mnemonicParsing="false" onAction="#loadScheadule" prefHeight="31.0" prefWidth="85.0" text="Schedule" />
                 <Button fx:id="BackBtt" layoutX="262.0" layoutY="162.0" mnemonicParsing="false" onAction="#goBack" prefHeight="31.0" prefWidth="85.0" text="Back" />
             </children>

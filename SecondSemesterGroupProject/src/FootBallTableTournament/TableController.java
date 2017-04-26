@@ -25,42 +25,37 @@ public class TableController {
 
     int choice = CreatePageController.choice;
     int limit=0;
-    boolean duplicatePrevention = true; //Used in errorMessage and parseShit methods to prevent duplicate information being entered into table
-    String nameOfTournament = CreatePageController.nameOfTournament;
+    boolean duplicatePrevention = true;
+    String nameOfTournament = CreatePageController.TName;
 
     @FXML
-    private TextField EmailP2; @FXML private TextField EmailP1;@FXML private TextField NameP2;@FXML private TextField NameP1;@FXML private TextField DOBp2;@FXML private TextField DOBp1;
+    private TextField EmailP2;
+    @FXML
+    private TextField EmailP1;
+    @FXML
+    private TextField NameP2;
+    @FXML
+    private TextField NameP1;
+    @FXML
+    private TextField DOBp2;
+    @FXML
+    private TextField DOBp1;
+    @FXML
+    private TextField TeamName;
+    @FXML
+    private Button BackBtt;
+    @FXML
+    private Button SaveBtt;
 
-    @FXML
-    private Button ShowShedulBtt;
-    @FXML
-    private Button FinalSave;
-    @FXML
-    private Button SavePlayer1;
-    @FXML
-    private Button SavePlayer2;
 
-    @FXML
-    private TableView<TableController> Table;
 
-    @FXML
-    private TableColumn<TableController, String> Name;
-    @FXML
-    private TableColumn<TableController, String> Email;
-    @FXML
-    private TableColumn<TableController, String> DOB;
-    @FXML
-    private TableColumn<TableController, String> Rank;
-    @FXML
-    private TableColumn<TableController, String> Team;
-
-    void ErrorMessage() //The errordialogue box method
+    void ErrorMessage() //The dialogue box method
     {
         JOptionPane.showMessageDialog(null,
                 "You have entered the wrong data type \n"
                         + "into the Date of birth field \n"
                         + "Please enter an integer(mmddyy)",
-                "YOU FUCKED UP",
+                "NOW YOU FUCKED UP",
                 JOptionPane.ERROR_MESSAGE);
         duplicatePrevention = false;
     }
@@ -71,14 +66,23 @@ public class TableController {
         Double.parseDouble(p1dob);
         Double.parseDouble(p2dob);
     }
+
     @FXML
-    void LoadPlayerOnTable(ActionEvent event) {
+    void goBack(ActionEvent event) {
+        scene.openWindowAndClose(event,"FirstPage.fxml","Welcome!",395, 251 );
+    }
+
+
+    @FXML
+    void SaveOnDB(ActionEvent event) {
         String p1name = NameP1.getText();
         String p2name = NameP2.getText();
         String p1email = EmailP1.getText();
         String p2email = EmailP2.getText();
         p1dob= DOBp1.getText();
         p2dob= DOBp2.getText();
+        String NameOfTeam = TeamName.getText();
+
         try{
             parseShit();
             duplicatePrevention = true;
@@ -89,13 +93,21 @@ public class TableController {
 
         if(limit<choice && duplicatePrevention == true) {
             try {
-                String sql = "INSERT INTO `" + nameOfTournament + "_players` VALUES ('" + p1name + "' ," + p1dob + ", '" + p1email + "', NULL)";
-                String mySql = "INSERT INTO `" + nameOfTournament + "_players` VALUES ('" + p2name + "' ," + p2dob + ", '" + p2email + "', NULL)";
+
                 //Create a connection and execute the Statement
                 Connection con = DBconnection.getConnection();
                 Statement stmt = con.createStatement();
-                stmt.executeUpdate(sql);
-                stmt.executeUpdate(mySql);
+
+                //INSERT INTO `teams` VALUES ('TeamName', NULL, NULL, 'TName')
+                String TeamSql ="INSERT INTO `footballtable`.`teams` VALUES ('"+NameOfTeam+"', NULL, NULL, '"+nameOfTournament+"',NULL)";
+                System.out.println(TeamSql);
+                stmt.executeUpdate(TeamSql);
+                //INSERT INTO `players` VALUES ('Bob', '2017-04-04', 'bob@email.com', NULL, 'Eagles'), ('Ida', '2017-04-26', 'ida@gmail.com', NULL, 'Eagles');
+                String PlSql ="INSERT INTO `footballtable`.`players` VALUES ('"+p1name+"', '"+p1dob+"', '"+p1email+"', NULL, '"+NameOfTeam+"'), ('"+p2name+"', '"+p2dob+"', '"+p2email+"', NULL, '"+NameOfTeam+"')";
+                System.out.println(PlSql);
+                stmt.executeUpdate(PlSql);
+
+
                 con.close();
                 NameP1.setText("");
                 NameP2.setText("");
@@ -103,6 +115,7 @@ public class TableController {
                 EmailP2.setText("");
                 DOBp1.setText("");
                 DOBp2.setText("");
+                TeamName.setText("");
                 limit++;
             } catch (SQLException e) {
                 e.printStackTrace();
@@ -115,43 +128,7 @@ public class TableController {
             EmailP2.setText("No more Players");
             DOBp1.setText("No more Players");
             DOBp2.setText("No more Players");}
-    }
-
-    @FXML
-    void CommitToDB(ActionEvent event) {
 
     }
 
-    @FXML
-    void DeleteTableContentPlayer(ActionEvent event) {
-
-    }
-
-    @FXML
-    void UpdateTableContentMatch(ActionEvent event) {
-
-    }
-
-    @FXML
-    void DeleteTableContentMatch(ActionEvent event) {
-
-    }
-
-    @FXML
-    void DispaySchedule(ActionEvent event) {
-
-        //if 4team condition is satisfied, launch 4team schedule
-        if(choice == 4) {
-            scene.openWindow(event,"fourTeamSchedule.fxml","4-Team Tournament!",600,217 );
-        }
-        if(choice == 6) {
-            scene.openWindow(event,"sixTeamSchedule.fxml","6-Team Tournament!",525,280 );
-        }
-        if(choice == 8) {
-            scene.openWindow(event,"eightTeamSchedule.fxml","8-Team Tournament",700,340 );
-        }
-        if(choice == 10) {
-            scene.openWindow(event,"tenTeamSchedule.fxml","10-Team Tournament",900,400 );
-        }
-    }
 }

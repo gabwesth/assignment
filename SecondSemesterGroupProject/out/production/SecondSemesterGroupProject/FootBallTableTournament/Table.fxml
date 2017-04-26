@@ -5,31 +5,22 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
 <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="535.0" prefWidth="743.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FootBallTableTournament.TableController">
    <children>
       <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="533.0" prefWidth="737.0">
          <children>
-            <TableView fx:id="Table" layoutX="168.0" layoutY="5.0" prefHeight="493.0" prefWidth="569.0">
-               <columns>
-                  <TableColumn fx:id="Name" prefWidth="187.0" text="Name" />
-                  <TableColumn fx:id="DOB" prefWidth="131.0" text="Date of Birth" />
-                  <TableColumn fx:id="Email" prefWidth="204.0" text="Email" />
-                  <TableColumn fx:id="Team" prefWidth="46.0" text="Team" />
-               </columns>
-            </TableView>
-            <Button fx:id="FinalSave" layoutX="300.0" layoutY="500.0" mnemonicParsing="false" onAction="#CommitToDB" text="Save" />
-            <Button layoutX="504.0" layoutY="500.0" mnemonicParsing="false" onAction="#DeleteTableContentPlayer" text="Delete" />
-            <TextField fx:id="NameP1" layoutX="14.0" layoutY="44.0" prefHeight="31.0" prefWidth="131.0" promptText="name" />
-            <TextField fx:id="DOBp1" layoutX="14.0" layoutY="87.0" prefHeight="31.0" prefWidth="131.0" promptText="date of birth" />
-            <TextField fx:id="EmailP1" layoutX="14.0" layoutY="132.0" prefHeight="31.0" prefWidth="131.0" promptText="email" />
-            <TextField fx:id="NameP2" layoutX="14.0" layoutY="211.0" prefHeight="31.0" prefWidth="131.0" promptText="name" />
-            <TextField fx:id="DOBp2" layoutX="14.0" layoutY="251.0" prefHeight="31.0" prefWidth="131.0" promptText="date of birth" />
-            <TextField fx:id="EmailP2" layoutX="14.0" layoutY="294.0" prefHeight="31.0" prefWidth="131.0" promptText="email" />
-            <Label layoutX="53.0" layoutY="14.0" text="Player 1" />
-            <Label layoutX="53.0" layoutY="180.0" text="Player 2" />
-            <Button fx:id="SaveTeam" layoutX="54.0" layoutY="339.0" mnemonicParsing="false" onAction="#LoadPlayerOnTable" text="Save" />
-            <Button fx:id="ShowSchedulBtt" layoutX="19.0" layoutY="469.0" mnemonicParsing="false" onAction="#DispaySchedule" text="Show Schedule" />
+            <Button fx:id="BackBtt" layoutX="490.0" layoutY="457.0" mnemonicParsing="false" onAction="#goBack" text="Back" />
+            <TextField fx:id="NameP1" layoutX="275.0" layoutY="70.0" prefHeight="31.0" prefWidth="131.0" promptText="name" />
+            <TextField fx:id="DOBp1" layoutX="275.0" layoutY="113.0" prefHeight="31.0" prefWidth="131.0" promptText="date of birth" />
+            <TextField fx:id="EmailP1" layoutX="275.0" layoutY="158.0" prefHeight="31.0" prefWidth="131.0" promptText="email" />
+            <TextField fx:id="NameP2" layoutX="275.0" layoutY="237.0" prefHeight="31.0" prefWidth="131.0" promptText="name" />
+            <TextField fx:id="DOBp2" layoutX="275.0" layoutY="277.0" prefHeight="31.0" prefWidth="131.0" promptText="date of birth" />
+            <TextField fx:id="EmailP2" layoutX="275.0" layoutY="319.0" prefHeight="31.0" prefWidth="131.0" promptText="email" />
+            <Label layoutX="314.0" layoutY="40.0" text="Player 1" />
+            <Label layoutX="314.0" layoutY="206.0" text="Player 2" />
+            <Button fx:id="SaveBtt" layoutX="314.0" layoutY="369.0" mnemonicParsing="false" onAction="#SaveOnDB" text="Save" />
+            <TextField fx:id="TeamName" layoutX="53.0" layoutY="70.0" promptText="Team Name" />
+            <Label layoutX="53.0" layoutY="40.0" text="TEAM" />
          </children>
       </Pane>
    </children>
