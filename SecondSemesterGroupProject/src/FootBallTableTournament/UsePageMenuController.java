@@ -2,12 +2,8 @@ package FootBallTableTournament;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.stage.Stage;
-import java.io.IOException;
+
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -28,6 +24,11 @@ public class UsePageMenuController {
 
     public void goBack(ActionEvent event){
         scene.openWindowAndClose(event,"UsePage.fxml","Select Tournament", 394, 251 );
+    }
+
+    @FXML
+    public void loadInfo(ActionEvent event) {
+        scene.openWindowAndClose(event, "InfoPage.fxml", "Team Info", 336, 229);
     }
 
     public void getMenu(ActionEvent event){
