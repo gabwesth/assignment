@@ -25,7 +25,7 @@ public class TableController {
     Main scene = new Main();
 
     int choice = CreatePageController.choice;
-    int limit=0;
+    int limit=1;
     boolean duplicatePrevention = true;
     String nameOfTournament = CreatePageController.TName;
     public String p1dob;
@@ -106,7 +106,7 @@ public class TableController {
 
         }
 
-        if(limit<choice && duplicatePrevention == true) {
+        if(limit<=choice && duplicatePrevention == true) {
             try {
 
                 //Create a connection and execute the Statement
@@ -114,16 +114,17 @@ public class TableController {
                 Statement stmt = con.createStatement();
 
                 //INSERT INTO `teams` VALUES ('TeamName', NULL, NULL, 'TName')
-                String TeamSql = "INSERT INTO `footballtable`.`teams` VALUES ('" + NameOfTeam + "', NULL, NULL, '" + nameOfTournament + "',NULL)";
+                String TeamSql = "INSERT INTO `footballtable`.`teams` VALUES ('" + NameOfTeam + "', NULL, NULL, '" + nameOfTournament + "',NULL, '" + limit + "')";
                 System.out.println(TeamSql);
                 stmt.executeUpdate(TeamSql);
+
                 //INSERT INTO `players` VALUES ('Bob', '2017-04-04', 'bob@email.com', NULL, 'Eagles'), ('Ida', '2017-04-26', 'ida@gmail.com', NULL, 'Eagles');
                 String PlSql = "INSERT INTO `footballtable`.`players` VALUES ('" + p1name + "', '" + p1dob + "', '" + p1email + "', NULL, '" + NameOfTeam + "'), ('" + p2name + "', '" + p2dob + "', '" + p2email + "', NULL, '" + NameOfTeam + "')";
                 System.out.println(PlSql);
                 stmt.executeUpdate(PlSql);
 
-
                 con.close();
+
                 NameP1.setText("");
                 NameP2.setText("");
                 EmailP1.setText("");
@@ -131,23 +132,44 @@ public class TableController {
                 DOBp1.setText("");
                 DOBp2.setText("");
                 TeamName.setText("");
+
                 limit++;
-            }catch (MySQLIntegrityConstraintViolationException e)
-                {
+                }catch (MySQLIntegrityConstraintViolationException e){
                     ErrorMessageTeam();
                     duplicatePrevention = false;
-                }
-            catch (SQLException e) {
+
+                } catch (SQLException e) {
                 e.printStackTrace();
-            }
+                }
         }
-        if(choice==limit){
-            NameP1.setText("No more Players");
-            NameP2.setText("No more Players");
-            EmailP1.setText("No more Players");
-            EmailP2.setText("No more Players");
-            DOBp1.setText("No more Players");
-            DOBp2.setText("No more Players");}
+
+            if(choice==limit){
+                NameP1.setText("No more Players");
+                NameP2.setText("No more Players");
+                EmailP1.setText("No more Players");
+                EmailP2.setText("No more Players");
+                DOBp1.setText("No more Players");
+                DOBp2.setText("No more Players");
+            }
+
+    }
+
+    void createGames(){
+        try {
+
+            //Create a connection and execute the Statement
+            Connection con = DBconnection.getConnection();
+            Statement stmt = con.createStatement();
+
+            //INSERT INTO `teams` VALUES ('TeamName', NULL, NULL, 'TName')
+            //String TeamSql = "INSERT INTO `footballtable`.`games` VALUES (NULL, '1', '4', NULL, NULL, NULL , 1, , '" + nameOfTournament + "')";
+
+
+
+
+        }catch (SQLException e) {
+            e.printStackTrace();
+        }
 
     }
 
