@@ -23,7 +23,8 @@ public class UsePageController {
 
     Main scene = new Main();
     public static String tour;
-    public static String chosenTournament = "";
+    public static String chosenTournament;
+
 
     @FXML
     private ChoiceBox TournamentsOption;
@@ -36,6 +37,7 @@ public class UsePageController {
 
     @FXML
     void goBack(ActionEvent event) {
+
         scene.openWindowAndClose(event,"FirstPage.fxml","Welcome!",395, 251 );
     }
 
@@ -67,6 +69,7 @@ public class UsePageController {
     @FXML
     void ShowTournamentMenu(ActionEvent event) throws SQLException
     {
+
         chosenTournament = (String) TournamentsOption.getValue();
         scene.openWindowAndClose(event,"UsePageMenu.fxml",chosenTournament,394, 251 );
 
