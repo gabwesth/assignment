@@ -38,7 +38,7 @@ public class UsePageMenuController {
                 int selection = 0;
                 try{
                     //SELECT NumberOfTeams FROM `tournaments` WHERE Name='f'
-                    String sql = "SELECT `NumberOfTeams` FROM `Tournaments` WHERE  Name = '"+UsePageController.chosenTournament+"'";
+                    String sql = "SELECT `NumberOfTeams` FROM `footballtable`.`tournaments` WHERE  Name = '"+UsePageController.chosenTournament+"'";
                     System.out.println(sql);
                     //Create a connection and execute the Statement
                     Connection con = DBconnection.getConnection();

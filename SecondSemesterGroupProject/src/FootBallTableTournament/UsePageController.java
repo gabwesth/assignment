@@ -46,7 +46,7 @@ public class UsePageController {
 
         Connection con = DBconnection.getConnection();
         Statement st = con.createStatement();
-        String sql = ("SELECT Name FROM `Tournaments`");
+        String sql = ("SELECT Name FROM `footballtable`.`tournaments`");
         ResultSet rs = st.executeQuery(sql);
 
         while(rs.next()) {
