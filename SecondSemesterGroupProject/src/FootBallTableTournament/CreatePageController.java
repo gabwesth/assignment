@@ -62,14 +62,26 @@ public class CreatePageController {
                 Connection con = DBconnection.getConnection();
                 Statement stmt = con.createStatement();
                 stmt.executeUpdate(sql);
-                con.close();
 
+                int NumbersOfGames = 0;
+                if(TNumbers == 4){ NumbersOfGames = 6;}
+                if(TNumbers == 6){ NumbersOfGames = 15;}
+                if(TNumbers == 8){NumbersOfGames = 28;}
+                if(TNumbers == 10){ NumbersOfGames = 45;}
+
+
+                for(int i=1; i<=NumbersOfGames; i++){
+                    String TeamSql = "INSERT INTO `footballtable`.`games` VALUES (NULL, NULL, NULL, NULL, NULL, NULL , NULL , '" + TName + "')";
+                    System.out.println(TeamSql);
+                    stmt.executeUpdate(TeamSql);
+                }
+                con.close();
             } catch (SQLException e) {
                 e.printStackTrace();
             }
 
         //Load the next page
-        scene.openWindowAndClose(event,"Table.fxml","New Tournament",737,533);
+        scene.openWindowAndClose(event,"Table.fxml","New Tournament",258,533);
     }
 
 
