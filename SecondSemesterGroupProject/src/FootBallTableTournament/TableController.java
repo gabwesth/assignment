@@ -1,5 +1,6 @@
 package FootBallTableTournament;
 
+import com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -27,6 +28,8 @@ public class TableController {
     int limit=0;
     boolean duplicatePrevention = true;
     String nameOfTournament = CreatePageController.TName;
+    public String p1dob;
+    public String p2dob;
 
     @FXML
     private TextField EmailP2;
@@ -49,18 +52,28 @@ public class TableController {
 
 
 
-    void ErrorMessage() //The dialogue box method
+    void ErrorMessageDOB() //The dialogue box method for DOB error
     {
         JOptionPane.showMessageDialog(null,
                 "You have entered the wrong data type \n"
                         + "into the Date of birth field \n"
-                        + "Please enter an integer(mmddyy)",
+                        + "Please enter an integer(YYYY-MM-DD)",
                 "NOW YOU FUCKED UP",
                 JOptionPane.ERROR_MESSAGE);
-        duplicatePrevention = false;
     }
-    public String p1dob;
-    public String p2dob;
+    void ErrorMessageTeam() //The dialogue box method for DOB error
+    {
+        JOptionPane.showMessageDialog(null,
+                "You have entered a duplicate team name \n"
+                        + "into team field. \n"
+                        + "Please enter a new team name",
+                "NOW YOU FUCKED UP",
+                JOptionPane.ERROR_MESSAGE);
+    }
+
+
+
+
     void parseShit() //Checks entered DOB values are integers
     {
         Double.parseDouble(p1dob);
@@ -88,7 +101,9 @@ public class TableController {
             duplicatePrevention = true;
         }
         catch (NumberFormatException nfe){
-            ErrorMessage();
+            ErrorMessageDOB();
+            duplicatePrevention = false;
+
         }
 
         if(limit<choice && duplicatePrevention == true) {
@@ -99,11 +114,11 @@ public class TableController {
                 Statement stmt = con.createStatement();
 
                 //INSERT INTO `teams` VALUES ('TeamName', NULL, NULL, 'TName')
-                String TeamSql ="INSERT INTO `footballtable`.`teams` VALUES ('"+NameOfTeam+"', NULL, NULL, '"+nameOfTournament+"',NULL)";
+                String TeamSql = "INSERT INTO `footballtable`.`teams` VALUES ('" + NameOfTeam + "', NULL, NULL, '" + nameOfTournament + "',NULL)";
                 System.out.println(TeamSql);
                 stmt.executeUpdate(TeamSql);
                 //INSERT INTO `players` VALUES ('Bob', '2017-04-04', 'bob@email.com', NULL, 'Eagles'), ('Ida', '2017-04-26', 'ida@gmail.com', NULL, 'Eagles');
-                String PlSql ="INSERT INTO `footballtable`.`players` VALUES ('"+p1name+"', '"+p1dob+"', '"+p1email+"', NULL, '"+NameOfTeam+"'), ('"+p2name+"', '"+p2dob+"', '"+p2email+"', NULL, '"+NameOfTeam+"')";
+                String PlSql = "INSERT INTO `footballtable`.`players` VALUES ('" + p1name + "', '" + p1dob + "', '" + p1email + "', NULL, '" + NameOfTeam + "'), ('" + p2name + "', '" + p2dob + "', '" + p2email + "', NULL, '" + NameOfTeam + "')";
                 System.out.println(PlSql);
                 stmt.executeUpdate(PlSql);
 
@@ -117,7 +132,12 @@ public class TableController {
                 DOBp2.setText("");
                 TeamName.setText("");
                 limit++;
-            } catch (SQLException e) {
+            }catch (MySQLIntegrityConstraintViolationException e)
+                {
+                    ErrorMessageTeam();
+                    duplicatePrevention = false;
+                }
+            catch (SQLException e) {
                 e.printStackTrace();
             }
         }

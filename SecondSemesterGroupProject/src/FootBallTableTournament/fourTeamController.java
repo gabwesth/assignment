@@ -25,6 +25,16 @@ public class fourTeamController {
     @FXML
     private TextField r32;
 
+    public void saveResults(ActionEvent event) {
+        String[] rounds = {r1.getText(), r12.getText(), r2.getText(), r22.getText(), r3.getText(), r32.getText()};
+
+        for (String s : rounds) {
+            String[] parts = s.split("-");
+            String part1 = parts[0];
+            String part2 = parts[1];
+            System.out.println(part1 + "\t" + part2); //TEST CODE
+        }
+    }
 
 
 }
