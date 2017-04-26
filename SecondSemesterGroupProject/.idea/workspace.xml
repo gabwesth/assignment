@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="90e828d3-e330-4c63-b70f-a770a2db1904" name="Default" comment="Added Error dialogues for date fo birth textfield">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SecondSemesterGroupProject/FootBallTableTournament/fourTeamController.class" afterPath="$PROJECT_DIR$/out/production/SecondSemesterGroupProject/FootBallTableTournament/fourTeamController.class" />
+    <list default="true" id="90e828d3-e330-4c63-b70f-a770a2db1904" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SecondSemesterGroupProject/FootBallTableTournament/TableController.class" afterPath="$PROJECT_DIR$/out/production/SecondSemesterGroupProject/FootBallTableTournament/TableController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SecondSemesterGroupProject/FootBallTableTournament/UsePageController.class" afterPath="$PROJECT_DIR$/out/production/SecondSemesterGroupProject/FootBallTableTournament/UsePageController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SecondSemesterGroupProject/FootBallTableTournament/UsePageMenuController.class" afterPath="$PROJECT_DIR$/out/production/SecondSemesterGroupProject/FootBallTableTournament/UsePageMenuController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SecondSemesterGroupProject/FootBallTableTournament/fourTeamSchedule.fxml" afterPath="$PROJECT_DIR$/out/production/SecondSemesterGroupProject/FootBallTableTournament/fourTeamSchedule.fxml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FootBallTableTournament/Table.fxml" afterPath="$PROJECT_DIR$/src/FootBallTableTournament/Table.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SecondSemesterGroupProject/FootBallTableTournament/Table.fxml" afterPath="$PROJECT_DIR$/out/production/SecondSemesterGroupProject/FootBallTableTournament/Table.fxml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FootBallTableTournament/TableController.java" afterPath="$PROJECT_DIR$/src/FootBallTableTournament/TableController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FootBallTableTournament/fourTeamController.java" afterPath="$PROJECT_DIR$/src/FootBallTableTournament/fourTeamController.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FootBallTableTournament/fourTeamSchedule.fxml" afterPath="$PROJECT_DIR$/src/FootBallTableTournament/fourTeamSchedule.fxml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,8 +32,8 @@
       <file leaf-file-name="fourTeamController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/FootBallTableTournament/fourTeamController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="28" column="114" lean-forward="false" selection-start-line="28" selection-start-column="114" selection-end-line="28" selection-end-column="114" />
+            <state relative-caret-position="302">
+              <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -42,7 +42,7 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/FootBallTableTournament/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="92">
+            <state relative-caret-position="682">
               <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
               <folding />
             </state>
@@ -52,7 +52,7 @@
       <file leaf-file-name="FirstPageController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/FootBallTableTournament/FirstPageController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
+            <state relative-caret-position="484">
               <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
               <folding />
             </state>
@@ -64,7 +64,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="946">
               <caret line="62" column="55" lean-forward="false" selection-start-line="62" selection-start-column="55" selection-end-line="62" selection-end-column="55" />
-              <folding />
+              <folding>
+                <marker date="1493200877627" expanded="true" signature="1739:1818" ph="INSERT INTO `footballtable`.`tournaments`... " />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -72,32 +74,12 @@
       <file leaf-file-name="TableController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/FootBallTableTournament/TableController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="443">
-              <caret line="69" column="34" lean-forward="false" selection-start-line="69" selection-start-column="34" selection-end-line="69" selection-end-column="34" />
+            <state relative-caret-position="968">
+              <caret line="63" column="62" lean-forward="false" selection-start-line="63" selection-start-column="62" selection-end-line="63" selection-end-column="62" />
               <folding>
-                <marker date="1493203537118" expanded="true" signature="3242:3352" ph="INSERT INTO `footballtable`.`teams`... " />
-                <marker date="1493203537118" expanded="true" signature="3636:3847" ph="INSERT INTO `footballtable`.`players`... " />
+                <marker date="1493204154730" expanded="true" signature="3243:3353" ph="INSERT INTO `footballtable`.`teams`... " />
+                <marker date="1493204154730" expanded="true" signature="3637:3848" ph="INSERT INTO `footballtable`.`players`... " />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="DBconnection.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/FootBallTableTournament/DBconnection.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="19" column="30" lean-forward="true" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UsePageController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/FootBallTableTournament/UsePageController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-68">
-              <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="39" selection-end-column="5" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -143,10 +125,9 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-9" />
-    <option name="y" value="-9" />
-    <option name="width" value="1938" />
-    <option name="height" value="1051" />
+    <option name="x" value="395" />
+    <option name="width" value="1533" />
+    <option name="height" value="1041" />
   </component>
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
@@ -753,7 +734,7 @@
       <workItem from="1493146285034" duration="4242000" />
       <workItem from="1493198476659" duration="80000" />
       <workItem from="1493198751618" duration="1784000" />
-      <workItem from="1493200893138" duration="2659000" />
+      <workItem from="1493200893138" duration="4401000" />
     </task>
     <task id="LOCAL-00001" summary="Added Error dialogues for date fo birth textfield">
       <created>1493119165710</created>
@@ -762,15 +743,22 @@
       <option name="project" value="LOCAL" />
       <updated>1493119165710</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Added error dialogue for duplicate team entry;&#10;Added ability to read entered results in 4team tournament">
+      <created>1493203592491</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1493203592491</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12869000" />
+    <option name="totallyTimeSpent" value="14611000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1051" extended-state="6" />
-    <editor active="true" />
+    <frame x="395" y="0" width="1533" height="1041" extended-state="0" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -782,12 +770,12 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32967034" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32637364" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24791667" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.090429045" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -844,7 +832,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Added Error dialogues for date fo birth textfield" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added Error dialogues for date fo birth textfield" />
+    <MESSAGE value="Added error dialogue for duplicate team entry;&#10;Added ability to read entered results in 4team tournament" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added error dialogue for duplicate team entry;&#10;Added ability to read entered results in 4team tournament" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -948,8 +937,8 @@
         <state relative-caret-position="88">
           <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
           <folding>
-            <marker date="1493203537118" expanded="true" signature="3242:3352" ph="INSERT INTO `footballtable`.`teams`... " />
-            <marker date="1493203537118" expanded="true" signature="3636:3847" ph="INSERT INTO `footballtable`.`players`... " />
+            <marker date="1493204154730" expanded="true" signature="3243:3353" ph="INSERT INTO `footballtable`.`teams`... " />
+            <marker date="1493204154730" expanded="true" signature="3637:3848" ph="INSERT INTO `footballtable`.`players`... " />
           </folding>
         </state>
       </provider>
@@ -1035,8 +1024,8 @@
         <state relative-caret-position="88">
           <caret line="21" column="13" lean-forward="false" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
           <folding>
-            <marker date="1493203537118" expanded="true" signature="3242:3352" ph="INSERT INTO `footballtable`.`teams`... " />
-            <marker date="1493203537118" expanded="true" signature="3636:3847" ph="INSERT INTO `footballtable`.`players`... " />
+            <marker date="1493204154730" expanded="true" signature="3243:3353" ph="INSERT INTO `footballtable`.`teams`... " />
+            <marker date="1493204154730" expanded="true" signature="3637:3848" ph="INSERT INTO `footballtable`.`players`... " />
           </folding>
         </state>
       </provider>
@@ -1071,7 +1060,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1493200877627" expanded="true" signature="1739:1818" ph="INSERT INTO `footballtable`.`tournaments`... " />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1094,7 +1085,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <marker date="1493200877627" expanded="true" signature="1739:1818" ph="INSERT INTO `footballtable`.`tournaments`... " />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1117,7 +1110,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1276">
           <caret line="77" column="32" lean-forward="true" selection-start-line="77" selection-start-column="32" selection-end-line="77" selection-end-column="32" />
-          <folding />
+          <folding>
+            <marker date="1493200877627" expanded="true" signature="1739:1818" ph="INSERT INTO `footballtable`.`tournaments`... " />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1190,14 +1185,6 @@
       </provider>
     </entry>
     <entry file="jar://$PROJECT_DIR$/../../KEA/FILES and DOC/mysql-connector-java-5.1.41/mysql-connector-java-5.1.41-bin.jar!/com/mysql/jdbc/MysqlIO.class" />
-    <entry file="file://$PROJECT_DIR$/src/FootBallTableTournament/CreatePageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="946">
-          <caret line="62" column="55" lean-forward="false" selection-start-line="62" selection-start-column="55" selection-end-line="62" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/FootBallTableTournament/UsePage.fxml">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1207,38 +1194,6 @@
       </provider>
       <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
         <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FootBallTableTournament/UsePageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-68">
-          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="39" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FootBallTableTournament/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="92">
-          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FootBallTableTournament/FirstPageController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/FootBallTableTournament/DBconnection.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="19" column="30" lean-forward="true" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/FootBallTableTournament/Table.fxml">
@@ -1252,21 +1207,63 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/FootBallTableTournament/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="682">
+          <caret line="40" column="0" lean-forward="false" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FootBallTableTournament/FirstPageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="484">
+          <caret line="32" column="0" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FootBallTableTournament/CreatePageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="946">
+          <caret line="62" column="55" lean-forward="false" selection-start-line="62" selection-start-column="55" selection-end-line="62" selection-end-column="55" />
+          <folding>
+            <marker date="1493200877627" expanded="true" signature="1739:1818" ph="INSERT INTO `footballtable`.`tournaments`... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FootBallTableTournament/DBconnection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="356">
+          <caret line="19" column="30" lean-forward="true" selection-start-line="19" selection-start-column="30" selection-end-line="19" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/FootBallTableTournament/UsePageController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="36" column="0" lean-forward="false" selection-start-line="36" selection-start-column="0" selection-end-line="39" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/FootBallTableTournament/TableController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="69" column="34" lean-forward="false" selection-start-line="69" selection-start-column="34" selection-end-line="69" selection-end-column="34" />
+        <state relative-caret-position="968">
+          <caret line="63" column="62" lean-forward="false" selection-start-line="63" selection-start-column="62" selection-end-line="63" selection-end-column="62" />
           <folding>
-            <marker date="1493203537118" expanded="true" signature="3242:3352" ph="INSERT INTO `footballtable`.`teams`... " />
-            <marker date="1493203537118" expanded="true" signature="3636:3847" ph="INSERT INTO `footballtable`.`players`... " />
+            <marker date="1493204154730" expanded="true" signature="3243:3353" ph="INSERT INTO `footballtable`.`teams`... " />
+            <marker date="1493204154730" expanded="true" signature="3637:3848" ph="INSERT INTO `footballtable`.`players`... " />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/FootBallTableTournament/fourTeamController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="28" column="114" lean-forward="false" selection-start-line="28" selection-start-column="114" selection-end-line="28" selection-end-column="114" />
+        <state relative-caret-position="302">
+          <caret line="34" column="0" lean-forward="false" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
           <folding />
         </state>
       </provider>

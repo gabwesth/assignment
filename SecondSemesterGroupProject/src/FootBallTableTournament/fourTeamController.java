@@ -32,7 +32,6 @@ public class fourTeamController {
             String[] parts = s.split("-");
             String part1 = parts[0];
             String part2 = parts[1];
-            System.out.println(part1 + "\t" + part2); //TEST CODE
         }
     }
 

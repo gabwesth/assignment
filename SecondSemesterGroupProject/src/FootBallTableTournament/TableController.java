@@ -61,7 +61,7 @@ public class TableController {
                 "NOW YOU FUCKED UP",
                 JOptionPane.ERROR_MESSAGE);
     }
-    void ErrorMessageTeam() //The dialogue box method for DOB error
+    void ErrorMessageTeam() //The dialogue box method for Team error
     {
         JOptionPane.showMessageDialog(null,
                 "You have entered a duplicate team name \n"
