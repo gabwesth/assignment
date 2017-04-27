@@ -4,6 +4,7 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 
 import javax.swing.*;
@@ -11,13 +12,15 @@ import java.sql.*;
 import java.util.ArrayList;
 
 public class InfoPageController {
-
+    Main scene = new Main();
     @FXML
     private ChoiceBox ChooseTeam;
     String tour = UsePageController.tour;
     public String printShit;
     ArrayList<String> ar = new ArrayList<String>();
     public String text;
+    @FXML
+    private Button backBtt;
 
 
 
@@ -47,6 +50,12 @@ public class InfoPageController {
     void DisplayInfo(ActionEvent event) throws SQLException {
         teamInfoDialogue();
     }
+
+    @FXML
+    void goBack(ActionEvent event){
+        scene.openWindowAndClose(event, "UsePageMenu.fxml", "Welcome", 395, 251);
+    }
+
 
     void teamInfoDialogue() throws SQLException {
 

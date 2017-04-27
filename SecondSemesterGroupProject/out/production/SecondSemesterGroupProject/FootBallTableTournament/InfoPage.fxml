@@ -6,7 +6,8 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="229.0" prefWidth="336.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FootBallTableTournament.InfoPageController">
    <children>
-      <Button fx:id="displayinfo" layoutX="129.0" layoutY="128.0" mnemonicParsing="false" onAction="#DisplayInfo" text="Display Info" />
+      <Button fx:id="displayinfo" layoutX="37.0" layoutY="129.0" mnemonicParsing="false" onAction="#DisplayInfo" text="Display Info" />
       <ChoiceBox fx:id="ChooseTeam" layoutX="93.0" layoutY="64.0" prefWidth="150.0" />
+      <Button fx:id="backBtt" layoutX="227.0" layoutY="129.0" mnemonicParsing="false" onAction="#goBack" text="Back" />
    </children>
 </Pane>
