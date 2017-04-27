@@ -2,9 +2,11 @@ package FootBallTableTournament;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.ChoiceBox;
 
+import javax.swing.*;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -24,10 +26,10 @@ public class InfoPageController {
 
         Connection con = DBconnection.getConnection();
         Statement st = con.createStatement();
-        String sql = ("SELECT `Name` FROM `footballtable`.`teams` WHERE `Tournament` = '"+UsePageController.chosenTournament+"' ");
+        String sql = ("SELECT `Name` FROM `footballtable`.`teams` WHERE `Tournament` = '" + UsePageController.chosenTournament + "' ");
         ResultSet rs = st.executeQuery(sql);
 
-        while(rs.next()) {
+        while (rs.next()) {
             optionList.add(rs.getString("Name"));
 
         }
@@ -35,9 +37,24 @@ public class InfoPageController {
         con.close();
         return optionList;
     }
+
     @FXML
     void initialize() throws SQLException {
         ChooseTeam.setItems(GetTeamName());
         tour = (String) ChooseTeam.getSelectionModel().getSelectedItem();
     }
+
+
+    @FXML
+    void DisplayInfo(ActionEvent event) {
+        teamInfoDialogue();
+    }
+
+    void teamInfoDialogue() {
+        JOptionPane.showMessageDialog(null,
+                "INPUT TEAM INFO HERE",
+                "Team Info",
+                JOptionPane.PLAIN_MESSAGE);
+    }
+
 }
