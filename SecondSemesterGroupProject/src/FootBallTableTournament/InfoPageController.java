@@ -17,8 +17,8 @@ public class InfoPageController {
     String tour = UsePageController.tour;
     public String printShit;
     ArrayList<String> ar = new ArrayList<String>();
-    public String printShit2;
-    public String printShit3;
+    public String text;
+
 
 
     @FXML
@@ -65,6 +65,11 @@ public class InfoPageController {
             for (int i = 1; i <= columnsNumber; i++) {
                 printShit =rsa.getString(i) + " ";
                 ar.add(printShit);
+                StringBuilder builder = new StringBuilder();
+                for (String value : ar) {
+                    builder.append(value);
+                }
+                text = builder.toString();
 
                // System.out.print(rsa.getString(i) + " "); //Print one element of a row
             }
@@ -74,7 +79,7 @@ public class InfoPageController {
         //}
 
         JOptionPane.showMessageDialog(null,
-                ar,
+                text,
                 "Team Info",
                 JOptionPane.PLAIN_MESSAGE);
         conn.close();

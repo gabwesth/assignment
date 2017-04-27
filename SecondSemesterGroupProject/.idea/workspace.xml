@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="90e828d3-e330-4c63-b70f-a770a2db1904" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SecondSemesterGroupProject/FootBallTableTournament/InfoPageController.class" afterPath="$PROJECT_DIR$/out/production/SecondSemesterGroupProject/FootBallTableTournament/InfoPageController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/SecondSemesterGroupProject/FootBallTableTournament/Table.fxml" afterPath="$PROJECT_DIR$/out/production/SecondSemesterGroupProject/FootBallTableTournament/Table.fxml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/FootBallTableTournament/InfoPageController.java" afterPath="$PROJECT_DIR$/src/FootBallTableTournament/InfoPageController.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -66,13 +65,13 @@
       <file leaf-file-name="InfoPageController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/FootBallTableTournament/InfoPageController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1320">
-              <caret line="68" column="56" lean-forward="true" selection-start-line="68" selection-start-column="56" selection-end-line="68" selection-end-column="56" />
+            <state relative-caret-position="280">
+              <caret line="66" column="22" lean-forward="true" selection-start-line="66" selection-start-column="22" selection-end-line="66" selection-end-column="22" />
               <folding>
                 <element signature="e#475#483#0" expanded="true" />
-                <marker date="1493287041994" expanded="true" signature="821:929" ph="SELECT `Name... teams" />
-                <marker date="1493287041994" expanded="true" signature="1648:1742" ph="SELECT `Name... players" />
-                <marker date="1493287041994" expanded="true" signature="1648:1761" ph="SELECT `Name... players" />
+                <marker date="1493289051316" expanded="true" signature="786:894" ph="SELECT `Name... teams" />
+                <marker date="1493289051316" expanded="true" signature="1613:1707" ph="SELECT `Name... players" />
+                <marker date="1493289051316" expanded="true" signature="1613:1726" ph="SELECT `Name... players" />
               </folding>
             </state>
           </provider>
@@ -802,7 +801,7 @@
       <workItem from="1493235193375" duration="604000" />
       <workItem from="1493241227411" duration="97000" />
       <workItem from="1493241441256" duration="70000" />
-      <workItem from="1493278722330" duration="6128000" />
+      <workItem from="1493278722330" duration="9105000" />
     </task>
     <task id="LOCAL-00001" summary="Added Error dialogues for date fo birth textfield">
       <created>1493119165710</created>
@@ -825,11 +824,18 @@
       <option name="project" value="LOCAL" />
       <updated>1493287125216</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Create Games with NULL values">
+      <created>1493287203600</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1493287203600</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26795000" />
+    <option name="totallyTimeSpent" value="29772000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1051" extended-state="6" />
@@ -1311,13 +1317,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/FootBallTableTournament/InfoPageController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1320">
-          <caret line="68" column="56" lean-forward="true" selection-start-line="68" selection-start-column="56" selection-end-line="68" selection-end-column="56" />
+        <state relative-caret-position="280">
+          <caret line="66" column="22" lean-forward="true" selection-start-line="66" selection-start-column="22" selection-end-line="66" selection-end-column="22" />
           <folding>
             <element signature="e#475#483#0" expanded="true" />
-            <marker date="1493287041994" expanded="true" signature="821:929" ph="SELECT `Name... teams" />
-            <marker date="1493287041994" expanded="true" signature="1648:1742" ph="SELECT `Name... players" />
-            <marker date="1493287041994" expanded="true" signature="1648:1761" ph="SELECT `Name... players" />
+            <marker date="1493289051316" expanded="true" signature="786:894" ph="SELECT `Name... teams" />
+            <marker date="1493289051316" expanded="true" signature="1613:1707" ph="SELECT `Name... players" />
+            <marker date="1493289051316" expanded="true" signature="1613:1726" ph="SELECT `Name... players" />
           </folding>
         </state>
       </provider>
