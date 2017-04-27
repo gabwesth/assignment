@@ -6,7 +6,9 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.Label;
 
+import javax.lang.model.element.Name;
 import javax.swing.*;
 import java.sql.*;
 import java.util.ArrayList;
@@ -21,6 +23,9 @@ public class InfoPageController {
     public String text;
     @FXML
     private Button backBtt;
+    @FXML
+    public Label name1;
+    public Label email1;
 
 
 
@@ -46,8 +51,9 @@ public class InfoPageController {
         tour = (String) ChooseTeam.getSelectionModel().getSelectedItem();
     }
 
+
     @FXML
-    void DisplayInfo(ActionEvent event) throws SQLException {
+    void editInfoBtt(ActionEvent event) throws SQLException{
         teamInfoDialogue();
     }
 
@@ -64,13 +70,14 @@ public class InfoPageController {
         Statement sta = conn.createStatement();
         String query = ("SELECT `Name`,`DateOfBirth`,`Email`,`TeamID` FROM `footballtable`.`players` WHERE `TeamID` = '" + chosenTeam + "' ");
         ResultSet rsa = sta.executeQuery(query);
-        ResultSetMetaData rsmda = rsa.getMetaData();
 
-        int columnsNumber = rsmda.getColumnCount();
+        name1.setText(rsa.getString("Name"));
+        email1.setText(rsa.getString("Email"));
 
-// Iterate through the data in the result set and display it.
-        while (rsa.next()) {
-//Print one row
+        //ResultSetMetaData rsmda = rsa.getMetaData();
+
+        //int columnsNumber = rsmda.getColumnCount();
+       /* while (rsa.next()) {
             for (int i = 1; i <= columnsNumber; i++) {
                 printShit =rsa.getString(i) + " ";
                 ar.add(printShit);
@@ -79,18 +86,14 @@ public class InfoPageController {
                     builder.append(value);
                 }
                 text = builder.toString();
-
-               // System.out.print(rsa.getString(i) + " "); //Print one element of a row
             }
-
             System.out.println();//Move to the next line to print the next row.
         }
-        //}
-
         JOptionPane.showMessageDialog(null,
                 text,
                 "Team Info",
-                JOptionPane.PLAIN_MESSAGE);
+                JOptionPane.PLAIN_MESSAGE);*/
+
         conn.close();
 
     }
