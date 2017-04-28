@@ -18,10 +18,14 @@ public class InfoPageController {
     @FXML
     private ChoiceBox ChooseTeam;
     String tour = UsePageController.tour;
+
+
     public String text;
     @FXML
     private Button backBtt;
-    @FXML
+@FXML
+private Button display;
+
     public Label name1;
     public Label email1;
     public Label dob1;
@@ -58,14 +62,27 @@ public class InfoPageController {
     void initialize() throws SQLException {
         ChooseTeam.setItems(GetTeamName());
         tour = (String) ChooseTeam.getSelectionModel().getSelectedItem();
+
     }
 
 
     @FXML
-    void editInfoBtt(ActionEvent event) throws SQLException {
+    void displayInfoBtt(ActionEvent event) throws SQLException {
         teamInfoDialogue();
-    }
+        switch (display.getText()) {
+            case "Edit":
 
+                break;
+             ///////////////////////////////
+            case "Display Info":
+
+                break;
+        }
+    }
+    @FXML
+    void deleteTeamBtt(ActionEvent event) throws SQLException{
+
+    }
     @FXML
     void goBack(ActionEvent event) {
         scene.openWindowAndClose(event, "UsePageMenu.fxml", "Welcome", 395, 251);
@@ -76,13 +93,9 @@ public class InfoPageController {
         String chosenTeam = (String) ChooseTeam.getValue();
         Connection conn = DBconnection.getConnection();
         Statement sta = conn.createStatement();
-        //Statement sta2 = conn.createStatement();
-        //String query2 = ("Select")
+
         String query = ("SELECT `Name`,`DateOfBirth`,`Email`,`TeamID`,`ID` FROM `footballtable`.`players` WHERE `TeamID` = '" + chosenTeam + "'");
         ResultSet rsa = sta.executeQuery(query);
-
-        //For the second player
-
         if (rsa.next()) {
             name1.setText("Name: " + rsa.getString("Name"));
             email1.setText("Email: " + rsa.getString("Email"));
@@ -91,13 +104,10 @@ public class InfoPageController {
             userID = rsa.getString("ID");
             System.out.println(userID);
         }
-
         finalID = (Integer.parseInt(userID) +1);
         Statement sta2 = conn.createStatement();
         String query2 = ("SELECT `Name`,`DateOfBirth`,`Email`,`TeamID`,`ID` FROM `footballtable`.`players` WHERE `ID` = '" + finalID + "' AND `TeamID` = '" + chosenTeam + "'");
         ResultSet rsa2 = sta2.executeQuery(query2);
-
-//also for the second player
         if(rsa2.next()) {
             name2.setText("Name: " + rsa2.getString("Name"));
             email2.setText("Email: " + rsa2.getString("Email"));
@@ -107,8 +117,5 @@ public class InfoPageController {
         }
 
             conn.close();
-
         }
-
-
     }

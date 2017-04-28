@@ -1,6 +1,5 @@
 package FootBallTableTournament;
 
-import com.sun.tools.javac.util.Name;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXML;
@@ -42,15 +41,6 @@ public class UsePageMenuController{
             //Load the previous page
         scene.openWindowAndClose(event,"UsePage.fxml","New Tournament", 737, 533 );
     }
-
-    // opens up the window where you can add players and name their team
-    @FXML
-    public void loadAddTeam(ActionEvent event){
-        scene.openWindowAndClose(event,"Table.fxml","New Team",258,533);
-
-    }
-
-
 
     public void loadScheadule(ActionEvent event){
                 int selection = 0;
