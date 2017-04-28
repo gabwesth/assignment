@@ -25,7 +25,7 @@ public class TableController {
     Main scene = new Main();
 
     int choice = CreatePageController.choice;
-    int limit=0;
+    int limit=1;
     boolean duplicatePrevention = true;
     String nameOfTournament = CreatePageController.TName;
     public String p1dob;
@@ -144,7 +144,7 @@ public class TableController {
                 }
         }
 
-            if(choice==limit){
+            if(choice==(limit+1)){
                 NameP1.setText("No more Players");
                 NameP2.setText("No more Players");
                 EmailP1.setText("No more Players");
