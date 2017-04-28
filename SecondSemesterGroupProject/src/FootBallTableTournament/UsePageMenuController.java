@@ -1,17 +1,21 @@
 package FootBallTableTournament;
 
+import com.sun.tools.javac.util.Name;
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Tab;
 
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class UsePageMenuController {
+public class UsePageMenuController{
     Main scene = new Main();
     String tour = UsePageController.tour;
+
 
     @FXML
     private Button ScheduleBtt; //Ability to add results
@@ -21,6 +25,9 @@ public class UsePageMenuController {
     private Button infoBtt; //Shows a list of teams that can be clicked on to display team info
     @FXML
     private Button StandingBtt; //Dialogue box/popup that shows a table of all teams and their GD, pts, and position
+    @FXML
+    private Button addNewTeam;
+
 
     public void goBack(ActionEvent event){
         scene.openWindowAndClose(event,"UsePage.fxml","Select Tournament", 394, 251 );
@@ -35,6 +42,16 @@ public class UsePageMenuController {
             //Load the previous page
         scene.openWindowAndClose(event,"UsePage.fxml","New Tournament", 737, 533 );
     }
+
+    // opens up the window where you can add players and name their team
+    @FXML
+    public void loadAddTeam(ActionEvent event){
+        scene.openWindowAndClose(event,"Table.fxml","New Team",258,533);
+
+    }
+
+
+
     public void loadScheadule(ActionEvent event){
                 int selection = 0;
                 try{
