@@ -21,6 +21,7 @@ public class UsePageMenuController{
     @FXML
     private Button BackBtt;
     @FXML
+    //FUCK JAVAFX
     private Button infoBtt; //Shows a list of teams that can be clicked on to display team info
     @FXML
     private Button StandingBtt; //Dialogue box/popup that shows a table of all teams and their GD, pts, and position
@@ -34,7 +35,7 @@ public class UsePageMenuController{
 
     @FXML
     public void loadInfo(ActionEvent event) {
-        scene.openWindowAndClose(event, "InfoPage.fxml", "Team Info", 500, 275);
+        scene.openWindowAndClose(event, "InfoPage.fxml", "Team Info", 500, 350);
     }
 
     public void getMenu(ActionEvent event){

@@ -15,7 +15,6 @@
                 <Button fx:id="infoBtt" layoutX="262.0" layoutY="50.0" mnemonicParsing="false" onAction="#loadInfo" prefHeight="31.0" prefWidth="85.0" text="Info" />
                 <Button fx:id="ScheduleBtt" layoutX="50.0" layoutY="162.0" mnemonicParsing="false" onAction="#loadScheadule" prefHeight="31.0" prefWidth="85.0" text="Schedule" />
                 <Button fx:id="BackBtt" layoutX="262.0" layoutY="162.0" mnemonicParsing="false" onAction="#goBack" prefHeight="31.0" prefWidth="85.0" text="Back" />
-            <Button fx:id="addNewTeam" layoutX="141.0" layoutY="112.0" mnemonicParsing="false" onAction="#loadAddTeam" text="Add new team" />
             </children>
         </Pane>
     </children>
