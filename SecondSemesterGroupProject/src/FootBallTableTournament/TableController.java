@@ -25,7 +25,7 @@ public class TableController {
     Main scene = new Main();
 
     int choice = CreatePageController.choice;
-    int limit=1;
+    int limit=0;
     boolean duplicatePrevention = true;
     String nameOfTournament = CreatePageController.TName;
     public String p1dob;

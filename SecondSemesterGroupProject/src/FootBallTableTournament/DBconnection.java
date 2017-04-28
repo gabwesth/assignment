@@ -9,7 +9,7 @@ import java.sql.SQLException;
  */
 public class DBconnection {
 
-   // private final static String url = "jdbc:mysql://localhost:3306/";
+    //private final static String url = "jdbc:mysql://localhost:3306/";
     private final static String url = "jdbc:mysql://35.157.209.176:3306/";
     private final static String DB_NAME = "footballtable";
     private final static String USER = "root";

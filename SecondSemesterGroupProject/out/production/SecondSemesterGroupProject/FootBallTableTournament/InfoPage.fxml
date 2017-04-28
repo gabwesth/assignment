@@ -6,8 +6,16 @@
 
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="229.0" prefWidth="336.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FootBallTableTournament.InfoPageController">
    <children>
-      <Button fx:id="displayinfo" layoutX="37.0" layoutY="129.0" mnemonicParsing="false" onAction="#DisplayInfo" text="Display Info" />
-      <ChoiceBox fx:id="ChooseTeam" layoutX="93.0" layoutY="64.0" prefWidth="150.0" />
-      <Button fx:id="backBtt" layoutX="227.0" layoutY="129.0" mnemonicParsing="false" onAction="#goBack" text="Back" />
+      <Button fx:id="edit" layoutX="37.0" layoutY="163.0" mnemonicParsing="false" onAction="#editInfoBtt" text="Edit" />
+      <ChoiceBox fx:id="ChooseTeam" layoutX="87.0" layoutY="14.0" prefWidth="150.0" />
+      <Button fx:id="backBtt" layoutX="225.0" layoutY="163.0" mnemonicParsing="false" onAction="#goBack" text="Back" />
+      <Label fx:id="name1" layoutX="14.0" layoutY="51.0" text="Name" />
+      <Label fx:id="email1" layoutX="15.0" layoutY="71.0" text="Email" />
+      <Label fx:id="dob1" layoutX="10.0" layoutY="91.0" text="Date of Birth" />
+      <Label fx:id="teamname1" layoutX="13.0" layoutY="115.0" text="Team name" />
+      <Label fx:id="teamname2" layoutX="240.0" layoutY="123.0" text="Team name" />
+      <Label fx:id="dob2" layoutX="237.0" layoutY="99.0" text="Date of Birth" />
+      <Label fx:id="email2" layoutX="242.0" layoutY="79.0" text="Email" />
+      <Label fx:id="name2" layoutX="241.0" layoutY="59.0" text="Name" />
    </children>
 </Pane>

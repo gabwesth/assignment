@@ -53,7 +53,6 @@ public class UsePageController {
 
         while(rs.next()) {
             optionList.add(rs.getString("Name"));
-
         }
 
         con.close();
@@ -72,6 +71,7 @@ public class UsePageController {
 
         chosenTournament = (String) TournamentsOption.getValue();
         scene.openWindowAndClose(event,"UsePageMenu.fxml",chosenTournament,394, 251 );
+
 
     }
 

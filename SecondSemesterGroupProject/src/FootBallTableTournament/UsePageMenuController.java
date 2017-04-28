@@ -28,7 +28,7 @@ public class UsePageMenuController {
 
     @FXML
     public void loadInfo(ActionEvent event) {
-        scene.openWindowAndClose(event, "InfoPage.fxml", "Team Info", 336, 229);
+        scene.openWindowAndClose(event, "InfoPage.fxml", "Team Info", 500, 275);
     }
 
     public void getMenu(ActionEvent event){
