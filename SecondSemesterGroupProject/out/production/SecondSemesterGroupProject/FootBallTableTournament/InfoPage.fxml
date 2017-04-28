@@ -4,20 +4,18 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="315.0" prefWidth="521.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FootBallTableTournament.InfoPageController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="229.0" prefWidth="336.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FootBallTableTournament.InfoPageController">
    <children>
-      <Button fx:id="displayInfo" layoutX="191.0" layoutY="229.0" mnemonicParsing="false" onAction="#displayInfoBtt" text="Display Info" />
-      <ChoiceBox fx:id="ChooseTeam" layoutX="186.0" layoutY="14.0" prefWidth="150.0" />
-      <Button fx:id="backBtt" layoutX="315.0" layoutY="271.0" mnemonicParsing="false" onAction="#goBack" text="Back" />
-      <Button fx:id="delete" layoutX="76.0" layoutY="271.0" mnemonicParsing="false" onAction="#deleteTeamBtt" text="Delete" />
-      <TextField fx:id="name1" editable="false" layoutX="18.0" layoutY="70.0" promptText="Name:" />
-      <TextField fx:id="email1" editable="false" layoutX="18.0" layoutY="110.0" promptText="Email:" />
-      <TextField fx:id="dob1" editable="false" layoutX="18.0" layoutY="150.0" promptText="Date of Birth:" />
-      <TextField fx:id="teamname" editable="false" layoutX="150.0" layoutY="191.0" promptText="TeamName:" />
-      <TextField fx:id="dob2" editable="false" layoutX="315.0" layoutY="150.0" promptText="Date of Birth:" />
-      <TextField fx:id="email2" editable="false" layoutX="315.0" layoutY="110.0" promptText="Email:" />
-      <TextField fx:id="name2" editable="false" layoutX="315.0" layoutY="70.0" promptText="Name:" />
-      <Button fx:id="saveInfo" layoutX="364.0" layoutY="229.0" mnemonicParsing="false" onAction="#saveInfoBtt" text="Save" />
-      <Button fx:id="editInfo" layoutX="294.0" layoutY="229.0" mnemonicParsing="false" onAction="#editInfoBtt" text="Edit" />
+      <Button fx:id="edit" layoutX="37.0" layoutY="163.0" mnemonicParsing="false" onAction="#editInfoBtt" text="Display data" />
+      <ChoiceBox fx:id="ChooseTeam" layoutX="87.0" layoutY="14.0" prefWidth="150.0" />
+      <Button fx:id="backBtt" layoutX="225.0" layoutY="163.0" mnemonicParsing="false" onAction="#goBack" text="Back" />
+      <Label fx:id="name1" layoutX="14.0" layoutY="51.0" text="Name" />
+      <Label fx:id="email1" layoutX="15.0" layoutY="71.0" text="Email" />
+      <Label fx:id="dob1" layoutX="10.0" layoutY="91.0" text="Date of Birth" />
+      <Label fx:id="teamname1" layoutX="13.0" layoutY="115.0" text="Team name" />
+      <Label fx:id="teamname2" layoutX="240.0" layoutY="123.0" text="Team name" />
+      <Label fx:id="dob2" layoutX="237.0" layoutY="99.0" text="Date of Birth" />
+      <Label fx:id="email2" layoutX="242.0" layoutY="79.0" text="Email" />
+      <Label fx:id="name2" layoutX="241.0" layoutY="59.0" text="Name" />
    </children>
 </Pane>
