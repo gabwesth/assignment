@@ -19,13 +19,15 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 
+//Page that creates a new Tournament and then Load The Table(for creating Teams and Players).
 public class CreatePageController {
     Main scene = new Main();
-    public static int choice;
-    //public static String nameOfTournament;
+
+    public static int choice; //variable to store the choosen number of team .
     public static String TName="";
     public static int TNumbers;
 
+    //ArrayList to store the option visualized in the ChoiceBox "TeamNumbers".
     ObservableList<Integer> optionList = FXCollections.observableArrayList(4,6,8,10);
 
         @FXML
@@ -38,26 +40,24 @@ public class CreatePageController {
         private Button NextBtt;
 
 
-    @FXML
+    @FXML //return to the First Page.
     private void goBack(ActionEvent event) {
         scene.openWindowAndClose(event,"FirstPage.fxml","Welcome!",395,251 );
     }
 
 
-    //load Table and Create Tournament into DataBase
+    //Load Table and Create Tournament into DataBase.
     @FXML
     private void LoadTable(ActionEvent event){
-        TName = NewTournamentName.getText();
-        //nameOfTournament = TName;
+        TName = NewTournamentName.getText(); //can be raplaced with tour?
         TNumbers = (int) TeamNumbers.getValue();
-        System.out.println("Chosen Value: "+TName +" _ "  + TNumbers);
         choice = (int) TeamNumbers.getSelectionModel().getSelectedItem();
+        System.out.println("Chosen Value: "+TName +" _ "  + TNumbers);
 
             try{
-                //INSERT INTO `tournaments`(`Name`, `NumberOfTeams`) VALUES ('TName','TNumbers')
                 String sql = "INSERT INTO `footballtable`.`tournaments` VALUES ('"+TName+"' , '"+TNumbers+"')";
-
                 System.out.println("SQL statement: "+sql);
+
                 //Create a connection and execute the Statement
                 Connection con = DBconnection.getConnection();
                 Statement stmt = con.createStatement();
@@ -69,12 +69,13 @@ public class CreatePageController {
                 if(TNumbers == 8){NumbersOfGames = 28;}
                 if(TNumbers == 10){ NumbersOfGames = 45;}
 
-
+                //creates games.
                 for(int i=1; i<=NumbersOfGames; i++){
-                    String TeamSql = "INSERT INTO `footballtable`.`games` VALUES (NULL, NULL, NULL, NULL, NULL, NULL , NULL , '" + TName + "')";
-                    System.out.println(TeamSql);
-                    stmt.executeUpdate(TeamSql);
+                    String GameSql = "INSERT INTO `footballtable`.`games` VALUES (NULL, NULL, NULL, NULL, NULL, NULL , NULL , '" + TName + "')";
+                    System.out.println("game "+i+": "+GameSql);
+                    stmt.executeUpdate(GameSql);
                 }
+
                 con.close();
             } catch (SQLException e) {
                 e.printStackTrace();

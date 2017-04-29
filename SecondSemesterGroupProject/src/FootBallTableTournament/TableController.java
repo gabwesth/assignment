@@ -81,7 +81,7 @@ public class TableController {
         Double.parseDouble(p2dob);
     }
 
-    @FXML
+    @FXML //back to the create Tournament page.
     void goBack(ActionEvent event) {
         scene.openWindowAndClose(event,"FirstPage.fxml","Welcome!",395, 251 );
     }
@@ -110,7 +110,7 @@ public class TableController {
         if(limit<=choice && duplicatePrevention == true) {
             try {
 
-                //Create a connection and execute the Statement
+                //Create a connection and create the Statement
                 Connection con = DBconnection.getConnection();
                 Statement stmt = con.createStatement();
 
@@ -123,6 +123,14 @@ public class TableController {
                 String PlSql = "INSERT INTO `footballtable`.`players` VALUES ('" + p1name + "', '" + p1dob + "', '" + p1email + "', NULL, '" + NameOfTeam + "'), ('" + p2name + "', '" + p2dob + "', '" + p2email + "', NULL, '" + NameOfTeam + "')";
                 System.out.println(PlSql);
                 stmt.executeUpdate(PlSql);
+
+                String pl1SQL = "UPDATE `footballtable`.`teams` SET `Player1ID` = ( SELECT ID FROM `players` WHERE `TeamID` = '" + NameOfTeam + "' AND `Name` = '" + p1name + "' )WHERE `Name`= '"+NameOfTeam+"' AND `Tournament` = '" + nameOfTournament + "'";
+                System.out.println(pl1SQL);
+                stmt.executeUpdate(pl1SQL);
+
+                String pl2SQL = "UPDATE `footballtable`.`teams` SET `Player2ID` = ( SELECT ID FROM `players` WHERE `TeamID` = '" + NameOfTeam + "' AND `Name` = '" + p2name + "' )WHERE `Name`= '"+NameOfTeam+"' AND  `Tournament` = '" + nameOfTournament + "'";
+                System.out.println(pl2SQL);
+                stmt.executeUpdate(pl2SQL);
 
                 con.close();
 
@@ -142,9 +150,9 @@ public class TableController {
                 } catch (SQLException e) {
                 e.printStackTrace();
                 }
-        }
 
-            if(choice==(limit+1)){
+            if(limit == (choice+1)){
+                TeamName.setText(choice +" Teams has been Added");
                 NameP1.setText("No more Players");
                 NameP2.setText("No more Players");
                 EmailP1.setText("No more Players");
@@ -152,6 +160,9 @@ public class TableController {
                 DOBp1.setText("No more Players");
                 DOBp2.setText("No more Players");
             }
+        }
+
+
 
     }
 
