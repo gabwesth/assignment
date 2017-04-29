@@ -69,6 +69,10 @@ public class InfoPageController {
     @FXML
     void editInfoBtt(ActionEvent event) throws SQLException{
         saveInfo.setOpacity(1);
+        editInfo.setOpacity(0);
+
+        //VVVVVV  WHY DO THESE NOT WORK?? VVVVVVV
+
         name1.setEditable(true);
         email1.setEditable(true);
         dob1.setEditable(true);
@@ -85,8 +89,10 @@ public class InfoPageController {
 
         }
         @FXML
-        void saveInfoBtt(ActionEvent event) throws SQLException{ //This gives an SQL syntax error at line 93 and I've no idea how to fix it
-            name1.getText();
+        void saveInfoBtt(ActionEvent event) throws SQLException{ //This gives an SQL syntax error at line 100 and I've no idea how to fix it
+
+           editInfo.setOpacity(1);
+           name1.getText();
             email1.getText();
             dob1.getText();
             teamname.getText();
@@ -100,6 +106,8 @@ public class InfoPageController {
             int resSet = state.executeUpdate(savSQL);
             System.out.println(resSet);
             connn.close();
+            saveInfo.setOpacity(0);
+
 
 
 
@@ -107,8 +115,7 @@ public class InfoPageController {
 
     @FXML
     void deleteTeamBtt(ActionEvent event) throws SQLException{
-       //The dialogue box to be moved elsewhere out of method or preferable to keep it in?
-        Object[] options = {"Yes", "No"};
+/*        Object[] options = {"Yes", "No"};
            int dialogue = JOptionPane.showOptionDialog(
 
                     null,
@@ -120,7 +127,7 @@ public class InfoPageController {
                 null,options,options[1]);
             if(dialogue ==JOptionPane.YES_OPTION){
                 //DELETE TEAM FROM DATABASE
-            }
+            }*/
     }
     @FXML
     void goBack(ActionEvent event) {
