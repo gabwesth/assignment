@@ -29,7 +29,7 @@ public class CreatePageController {
 
 
     //ArrayList to store the option visualized in the ChoiceBox "TeamNumbers".
-    ObservableList<Integer> optionList = FXCollections.observableArrayList(4,6,8,10);
+    ObservableList<Integer> optionList = FXCollections.observableArrayList(4,6,8);
 
         @FXML
         public ChoiceBox TeamNumbers;
@@ -70,7 +70,7 @@ public class CreatePageController {
 
                 //creates games.
                 for(int i=1; i<=NumbersOfGames; i++){
-                    String GameSql = "INSERT INTO `footballtable`.`games` VALUES (NULL, NULL, NULL, NULL, NULL, NULL , NULL , '" + tour + "')";
+                    String GameSql = "INSERT INTO `footballtable`.`games` VALUES (NULL, NULL, NULL, NULL, NULL , NULL , '" + tour + "')";
                     System.out.println("game "+i+": "+GameSql);
                     stmt.executeUpdate(GameSql);
                 }
