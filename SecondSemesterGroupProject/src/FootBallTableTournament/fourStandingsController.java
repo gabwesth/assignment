@@ -6,7 +6,7 @@ import javafx.scene.control.Label;
 import java.sql.*;
 import java.util.*;
 
-public class StandingsController {
+public class fourStandingsController {
 
     String tour = UsePageController.tour;
     @FXML
