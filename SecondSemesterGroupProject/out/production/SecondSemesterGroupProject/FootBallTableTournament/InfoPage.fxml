@@ -1,22 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
 <?import javafx.scene.control.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<Pane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="315.0" prefWidth="521.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FootBallTableTournament.InfoPageController">
+<Pane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="315.0" prefWidth="521.0" style="-fx-background-color: #8AB7EE;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FootBallTableTournament.InfoPageController">
    <children>
-      <Button fx:id="displayInfo" layoutX="191.0" layoutY="211.0" mnemonicParsing="false" onAction="#displayInfoBtt" text="Display Info" />
-      <ChoiceBox fx:id="ChooseTeam" layoutX="186.0" layoutY="14.0" prefWidth="150.0" />
-      <Button fx:id="backBtt" layoutX="465.0" layoutY="276.0" mnemonicParsing="false" onAction="#goBack" text="Back" />
-      <TextField fx:id="name1" editable="false" layoutX="18.0" layoutY="52.0" promptText="Name:" />
-      <TextField fx:id="email1" editable="false" layoutX="18.0" layoutY="92.0" promptText="Email:" />
-      <TextField fx:id="dob1" editable="false" layoutX="18.0" layoutY="132.0" promptText="Date of Birth:" />
-      <TextField fx:id="teamname" editable="false" layoutX="150.0" layoutY="173.0" promptText="TeamName:" />
-      <TextField fx:id="dob2" editable="false" layoutX="315.0" layoutY="132.0" promptText="Date of Birth:" />
-      <TextField fx:id="email2" editable="false" layoutX="315.0" layoutY="92.0" promptText="Email:" />
-      <TextField fx:id="name2" editable="false" layoutX="315.0" layoutY="52.0" promptText="Name:" />
-      <Button fx:id="saveInfo" layoutX="213.0" layoutY="281.0" mnemonicParsing="false" onAction="#saveInfoBtt" text="Save" />
-      <Button fx:id="editInfo" layoutX="215.0" layoutY="246.0" mnemonicParsing="false" onAction="#editInfoBtt" text="Edit" />
+      <Button fx:id="displayInfo" layoutX="191.0" layoutY="211.0" mnemonicParsing="false" onAction="#displayInfoBtt" style="-fx-background-color: #FFFFFF;" text="Display Info">
+         <effect>
+            <DropShadow spread="0.17" />
+         </effect></Button>
+      <ChoiceBox fx:id="ChooseTeam" layoutX="186.0" layoutY="14.0" prefWidth="150.0" style="-fx-background-color: #FFFFFF;">
+         <effect>
+            <DropShadow spread="0.17" />
+         </effect></ChoiceBox>
+      <Button fx:id="backBtt" layoutX="465.0" layoutY="276.0" mnemonicParsing="false" onAction="#goBack" style="-fx-background-color: #FFFFFF;" text="Back">
+         <effect>
+            <DropShadow spread="0.17" />
+         </effect></Button>
+      <TextField fx:id="name1" editable="false" layoutX="18.0" layoutY="52.0" promptText="Name:">
+         <effect>
+            <DropShadow spread="0.16" />
+         </effect></TextField>
+      <TextField fx:id="email1" editable="false" layoutX="18.0" layoutY="92.0" promptText="Email:">
+         <effect>
+            <DropShadow spread="0.16" />
+         </effect></TextField>
+      <TextField fx:id="dob1" editable="false" layoutX="18.0" layoutY="132.0" promptText="Date of Birth:">
+         <effect>
+            <DropShadow spread="0.16" />
+         </effect></TextField>
+      <TextField fx:id="teamname" editable="false" layoutX="150.0" layoutY="173.0" promptText="TeamName:">
+         <effect>
+            <DropShadow spread="0.16" />
+         </effect></TextField>
+      <TextField fx:id="dob2" editable="false" layoutX="315.0" layoutY="132.0" promptText="Date of Birth:">
+         <effect>
+            <DropShadow spread="0.16" />
+         </effect></TextField>
+      <TextField fx:id="email2" editable="false" layoutX="315.0" layoutY="92.0" promptText="Email:">
+         <effect>
+            <DropShadow spread="0.16" />
+         </effect></TextField>
+      <TextField fx:id="name2" editable="false" layoutX="315.0" layoutY="52.0" promptText="Name:">
+         <effect>
+            <DropShadow spread="0.16" />
+         </effect></TextField>
+      <Button fx:id="saveInfo" layoutX="213.0" layoutY="281.0" mnemonicParsing="false" onAction="#saveInfoBtt" style="-fx-background-color: #FFFFFF;" text="Save">
+         <effect>
+            <DropShadow spread="0.17" />
+         </effect></Button>
+      <Button fx:id="editInfo" layoutX="215.0" layoutY="246.0" mnemonicParsing="false" onAction="#editInfoBtt" style="-fx-background-color: #FFFFFF;" text="Edit">
+         <effect>
+            <DropShadow spread="0.17" />
+         </effect></Button>
    </children>
 </Pane>

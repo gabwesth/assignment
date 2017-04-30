@@ -1,29 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<GridPane alignment="center" hgap="10" vgap="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FootBallTableTournament.CreatePageController">
+
+<Pane prefHeight="251.0" prefWidth="394.0" style="-fx-background-color: #8AB7EE;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FootBallTableTournament.CreatePageController">
    <children>
-      <Pane prefHeight="251.0" prefWidth="394.0" GridPane.rowIndex="1">
-         <children>
-            <TextField fx:id="NewTournamentName" layoutX="196.0" layoutY="93.0" />
-            <Label layoutX="86.0" layoutY="97.0" prefHeight="11.0" prefWidth="99.0" text="Tornament Name :" />
-            <ChoiceBox fx:id="TeamNumbers" layoutX="196.0" layoutY="134.0" prefHeight="25.0" prefWidth="38.0" />
-            <Label layoutX="82.0" layoutY="138.0" text="Numbers of Teams :" />
-            <Button fx:id="NextBtt" layoutX="302.0" layoutY="193.0" mnemonicParsing="false" onAction="#LoadTable" prefHeight="32.0" prefWidth="55.0" text="NEXT" />
-            <Button fx:id="BackBtt" layoutX="31.0" layoutY="193.0" mnemonicParsing="false" onAction="#goBack" prefHeight="32.0" prefWidth="55.0" text="BACK" />
-         </children>
-      </Pane>
+      <TextField fx:id="NewTournamentName" layoutX="196.0" layoutY="93.0">
+         <effect>
+            <DropShadow spread="0.14" />
+         </effect>
+      </TextField>
+      <Label layoutX="68.0" layoutY="97.0" prefHeight="11.0" prefWidth="99.0" text="Tournament Name :" />
+      <ChoiceBox fx:id="TeamNumbers" layoutX="196.0" layoutY="134.0" prefHeight="25.0" prefWidth="38.0">
+         <effect>
+            <DropShadow spread="0.13" />
+         </effect>
+      </ChoiceBox>
+      <Label layoutX="64.0" layoutY="138.0" text="Numbers of Teams :" />
+      <Button fx:id="NextBtt" layoutX="302.0" layoutY="193.0" mnemonicParsing="false" onAction="#LoadTable" prefHeight="32.0" prefWidth="55.0" style="-fx-background-color: #FFFFFF;" text="NEXT">
+         <effect>
+            <DropShadow spread="0.16" />
+         </effect>
+      </Button>
+      <Button fx:id="BackBtt" layoutX="31.0" layoutY="193.0" mnemonicParsing="false" onAction="#goBack" prefHeight="32.0" prefWidth="55.0" style="-fx-background-color: #FFFFFF;" text="BACK">
+         <effect>
+            <DropShadow spread="0.16" />
+         </effect>
+      </Button>
    </children>
-   <columnConstraints>
-      <ColumnConstraints />
-   </columnConstraints>
-   <rowConstraints>
-      <RowConstraints />
-      <RowConstraints />
-   </rowConstraints>
-</GridPane>
+</Pane>

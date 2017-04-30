@@ -51,7 +51,7 @@ public class UsePageMenuController {
     }
     @FXML
     public void loadInfo(ActionEvent event) {
-        scene.openWindowAndClose(event, "InfoPage.fxml", "Team Info", 550, 350);
+        scene.openWindowAndClose(event, "InfoPage.fxml", "Team Info", 483, 315);
     }
 
     public void getMenu(ActionEvent event){
@@ -62,11 +62,11 @@ public class UsePageMenuController {
         NoOfTeams();
         //Load the previous page
         if(selection== 4) {
-            scene.openWindowAndClose(event,"Standings.fxml","New Tournament", 350, 200 );        }
+            scene.openWindow(event,"Standings.fxml","New Tournament", 247, 318 );        }
         if(selection == 6) {
-            scene.openWindowAndClose(event,"sixStanding.fxml","New Tournament", 737, 533 );        }
+            scene.openWindow(event,"sixStanding.fxml","New Tournament", 215, 351 );        }
         if(selection == 8) {
-            scene.openWindow(event,"eightStanding.fxml","8-Team Tournament",700,322 );
+            scene.openWindow(event,"eightStanding.fxml","8-Team Tournament",216,400 );
         }
     }
 

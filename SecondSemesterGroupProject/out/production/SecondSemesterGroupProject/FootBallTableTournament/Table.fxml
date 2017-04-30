@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
 <?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
@@ -9,23 +10,56 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.StackPane?>
 
-<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="535.0" prefWidth="268.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FootBallTableTournament.TableController">
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="533.0" prefWidth="258.0" style="-fx-background-color: #8AB7EE;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FootBallTableTournament.TableController">
    <children>
-      <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="533.0" prefWidth="258.0">
-         <children>
-            <Button fx:id="BackBtt" layoutX="204.0" layoutY="494.0" mnemonicParsing="false" onAction="#goBack" text="Back" />
-            <TextField fx:id="NameP1" layoutX="31.0" layoutY="146.0" prefHeight="31.0" prefWidth="193.0" promptText="name" />
-            <TextField fx:id="EmailP1" layoutX="31.0" layoutY="234.0" prefHeight="31.0" prefWidth="193.0" promptText="email" />
-            <TextField fx:id="NameP2" layoutX="31.0" layoutY="313.0" prefHeight="31.0" prefWidth="193.0" promptText="name" />
-            <TextField fx:id="EmailP2" layoutX="31.0" layoutY="401.0" prefHeight="31.0" prefWidth="193.0" promptText="email" />
-            <Label layoutX="106.0" layoutY="117.0" text="Player 1" />
-            <Label layoutX="106.0" layoutY="284.0" text="Player 2" />
-            <Button fx:id="SaveBtt" layoutX="101.0" layoutY="447.0" mnemonicParsing="false" onAction="#SaveOnDB" prefHeight="31.0" prefWidth="54.0" text="Save" />
-            <TextField fx:id="TeamName" layoutX="53.0" layoutY="70.0" promptText="Team Name" />
-            <Label layoutX="112.0" layoutY="41.0" text="TEAM" />
-            <TextField fx:id="DOBp1" layoutX="30.0" layoutY="188.0" prefHeight="31.0" prefWidth="193.0" promptText="date of birth (YYYYMMDD)" />
-            <TextField fx:id="DOBp2" layoutX="30.0" layoutY="357.0" prefHeight="31.0" prefWidth="193.0" promptText="date of birth (YYYYMMDD)" />
-         </children>
-      </Pane>
+      <Button fx:id="BackBtt" layoutX="204.0" layoutY="494.0" mnemonicParsing="false" onAction="#goBack" style="-fx-background-color: #FFFFFF;" text="Back">
+         <effect>
+            <DropShadow spread="0.18" />
+         </effect>
+      </Button>
+      <TextField fx:id="NameP1" layoutX="31.0" layoutY="146.0" prefHeight="31.0" prefWidth="193.0" promptText="name">
+         <effect>
+            <DropShadow />
+         </effect>
+      </TextField>
+      <TextField fx:id="EmailP1" layoutX="31.0" layoutY="234.0" prefHeight="31.0" prefWidth="193.0" promptText="email">
+         <effect>
+            <DropShadow />
+         </effect>
+      </TextField>
+      <TextField fx:id="NameP2" layoutX="31.0" layoutY="313.0" prefHeight="31.0" prefWidth="193.0" promptText="name">
+         <effect>
+            <DropShadow />
+         </effect>
+      </TextField>
+      <TextField fx:id="EmailP2" layoutX="31.0" layoutY="401.0" prefHeight="31.0" prefWidth="193.0" promptText="email">
+         <effect>
+            <DropShadow />
+         </effect>
+      </TextField>
+      <Label layoutX="106.0" layoutY="117.0" text="Player 1" />
+      <Label layoutX="106.0" layoutY="284.0" text="Player 2" />
+      <Button fx:id="SaveBtt" layoutX="101.0" layoutY="447.0" mnemonicParsing="false" onAction="#SaveOnDB" prefHeight="31.0" prefWidth="54.0" style="-fx-background-color: #FFFFFF;" text="Save">
+         <effect>
+            <DropShadow spread="0.18" />
+         </effect>
+      </Button>
+      <TextField fx:id="TeamName" layoutX="53.0" layoutY="70.0" promptText="Team Name">
+         <effect>
+            <DropShadow />
+         </effect>
+      </TextField>
+      <Label layoutX="112.0" layoutY="41.0" text="TEAM" />
+      <TextField fx:id="DOBp1" layoutX="30.0" layoutY="188.0" prefHeight="31.0" prefWidth="193.0" promptText="date of birth (YYYYMMDD)">
+         <effect>
+            <DropShadow />
+         </effect>
+      </TextField>
+      <TextField fx:id="DOBp2" layoutX="30.0" layoutY="357.0" prefHeight="31.0" prefWidth="193.0" promptText="date of birth (YYYYMMDD)">
+         <effect>
+            <DropShadow />
+         </effect>
+      </TextField>
    </children>
-</StackPane>
+</Pane>

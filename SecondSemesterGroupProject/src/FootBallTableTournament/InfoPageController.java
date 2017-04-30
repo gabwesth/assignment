@@ -74,7 +74,6 @@ public class InfoPageController {
         name1.setEditable(true);
         email1.setEditable(true);
         dob1.setEditable(true);
-        teamname.setEditable(true);
         name2.setEditable(true);
         email2.setEditable(true);
         dob2.setEditable(true);
@@ -114,6 +113,12 @@ public class InfoPageController {
                     "Update saved successfully to database",
                     "Saved Successfully",
                     JOptionPane.INFORMATION_MESSAGE);
+            name1.setEditable(false);
+            email1.setEditable(false);
+            dob1.setEditable(false);
+            name2.setEditable(false);
+            email2.setEditable(false);
+            dob2.setEditable(false);
         }
 
     @FXML

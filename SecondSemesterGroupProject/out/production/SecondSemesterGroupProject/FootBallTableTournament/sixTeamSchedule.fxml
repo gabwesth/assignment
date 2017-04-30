@@ -1,49 +1,98 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.Pane?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="411.0" prefWidth="524.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FootBallTableTournament.sixTeamController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="411.0" prefWidth="524.0" style="-fx-background-color: #8AB7EE;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FootBallTableTournament.sixTeamController">
    <children>
-      <Label layoutY="20.0" text="Round 1" />
-      <Label layoutX="100.0" layoutY="20.0" text="Round 2" />
-      <Label layoutX="200.0" layoutY="20.0" text="Round 3" />
-      <Label layoutX="300.0" layoutY="20.0" text="Round 4" />
-      <Label layoutX="400.0" layoutY="20.0" text="Round 5" />
-      <Label fx:id="q1" layoutY="55.0" prefHeight="20.0" prefWidth="21.0" text="1v2" textAlignment="CENTER" />
-      <Label fx:id="q12" layoutY="130.0" prefHeight="20.0" prefWidth="21.0" text="3v6" />
-      <Label fx:id="q13" layoutY="200.0" prefHeight="20.0" prefWidth="21.0" text="4v5" />
-      <Label fx:id="q2" layoutX="100.0" layoutY="55.0" prefHeight="20.0" prefWidth="21.0" text="1v6" />
-      <Label fx:id="q22" layoutX="100.0" layoutY="130.0" prefHeight="20.0" prefWidth="21.0" text="3v4" />
-      <Label fx:id="q23" layoutX="100.0" layoutY="200.0" prefHeight="20.0" prefWidth="21.0" text="2v5" />
-      <Label fx:id="q3" layoutX="200.0" layoutY="55.0" prefHeight="20.0" prefWidth="21.0" text="1v5" />
-      <Label fx:id="q32" layoutX="200.0" layoutY="130.0" prefHeight="20.0" prefWidth="21.0" text="3v2" />
-      <Label fx:id="q33" layoutX="200.0" layoutY="200.0" prefHeight="20.0" prefWidth="21.0" text="4v6" />
-      <Label fx:id="q4" layoutX="300.0" layoutY="55.0" prefHeight="20.0" prefWidth="21.0" text="1v4" />
-      <Label fx:id="q42" layoutX="300.0" layoutY="130.0" prefHeight="20.0" prefWidth="21.0" text="3v5" />
-      <Label fx:id="q43" layoutX="300.0" layoutY="200.0" prefHeight="20.0" prefWidth="21.0" text="2v6" />
-      <Label fx:id="q5" layoutX="400.0" layoutY="55.0" prefHeight="20.0" prefWidth="21.0" text="1v3" />
-      <Label fx:id="q52" layoutX="400.0" layoutY="130.0" prefHeight="20.0" prefWidth="21.0" text="5v6" />
-      <Label fx:id="q53" layoutX="400.0" layoutY="200.0" prefHeight="20.0" prefWidth="21.0" text="4v2" />
-      <Button fx:id="SaveBtt" layoutX="464.0" layoutY="375.0" mnemonicParsing="false" onAction="#saveResults" text="Save" />
-      <TextField fx:id="r1" layoutX="25.0" layoutY="50.0" prefHeight="30.0" prefWidth="59.0" promptText="result" />
-      <Label layoutX="199.0" layoutY="387.0" opacity="0.53" text="Enter Results (int-int)" />
-      <TextField fx:id="r12" layoutX="25.0" layoutY="125.0" prefHeight="30.0" prefWidth="59.0" promptText="result" />
-      <TextField fx:id="r13" layoutX="25.0" layoutY="195.0" prefHeight="30.0" prefWidth="59.0" promptText="result" />
-      <TextField fx:id="r23" layoutX="125.0" layoutY="195.0" prefHeight="30.0" prefWidth="59.0" promptText="result" />
-      <TextField fx:id="r22" layoutX="125.0" layoutY="125.0" prefHeight="30.0" prefWidth="59.0" promptText="result" />
-      <TextField fx:id="r2" layoutX="123.0" layoutY="50.0" prefHeight="30.0" prefWidth="59.0" promptText="result" />
-      <TextField fx:id="r33" layoutX="225.0" layoutY="195.0" prefHeight="30.0" prefWidth="59.0" promptText="result" />
-      <TextField fx:id="r32" layoutX="225.0" layoutY="125.0" prefHeight="30.0" prefWidth="59.0" promptText="result" />
-      <TextField fx:id="r3" layoutX="225.0" layoutY="50.0" prefHeight="30.0" prefWidth="59.0" promptText="result" />
-      <TextField fx:id="r43" layoutX="325.0" layoutY="195.0" prefHeight="30.0" prefWidth="59.0" promptText="result" />
-      <TextField fx:id="r42" layoutX="325.0" layoutY="125.0" prefHeight="30.0" prefWidth="59.0" promptText="result" />
-      <TextField fx:id="r4" layoutX="325.0" layoutY="50.0" prefHeight="30.0" prefWidth="59.0" promptText="result" />
-      <TextField fx:id="r53" layoutX="425.0" layoutY="195.0" prefHeight="30.0" prefWidth="59.0" promptText="result" />
-      <TextField fx:id="r52" layoutX="425.0" layoutY="125.0" prefHeight="30.0" prefWidth="59.0" promptText="result" />
-      <TextField fx:id="r5" layoutX="425.0" layoutY="50.0" prefHeight="30.0" prefWidth="59.0" promptText="result" />
+      <Label layoutX="52.0" layoutY="20.0" text="Round 1" />
+      <Label layoutX="150.0" layoutY="20.0" text="Round 2" />
+      <Label layoutX="252.0" layoutY="20.0" text="Round 3" />
+      <Label layoutX="352.0" layoutY="20.0" text="Round 4" />
+      <Label layoutX="452.0" layoutY="20.0" text="Round 5" />
+      <Label fx:id="q1" layoutX="16.0" layoutY="55.0" prefHeight="20.0" prefWidth="25.0" text="1v2" textAlignment="CENTER" />
+      <Label fx:id="q12" layoutX="16.0" layoutY="130.0" prefHeight="20.0" prefWidth="25.0" text="3v6" />
+      <Label fx:id="q13" layoutX="16.0" layoutY="200.0" prefHeight="20.0" prefWidth="25.0" text="4v5" />
+      <Label fx:id="q2" layoutX="116.0" layoutY="55.0" prefHeight="20.0" prefWidth="25.0" text="1v6" />
+      <Label fx:id="q22" layoutX="116.0" layoutY="130.0" prefHeight="20.0" prefWidth="25.0" text="3v4" />
+      <Label fx:id="q23" layoutX="116.0" layoutY="200.0" prefHeight="20.0" prefWidth="25.0" text="2v5" />
+      <Label fx:id="q3" layoutX="216.0" layoutY="55.0" prefHeight="20.0" prefWidth="25.0" text="1v5" />
+      <Label fx:id="q32" layoutX="216.0" layoutY="130.0" prefHeight="20.0" prefWidth="25.0" text="3v2" />
+      <Label fx:id="q33" layoutX="216.0" layoutY="200.0" prefHeight="20.0" prefWidth="25.0" text="4v6" />
+      <Label fx:id="q4" layoutX="316.0" layoutY="55.0" prefHeight="20.0" prefWidth="25.0" text="1v4" />
+      <Label fx:id="q42" layoutX="316.0" layoutY="130.0" prefHeight="20.0" prefWidth="25.0" text="3v5" />
+      <Label fx:id="q43" layoutX="316.0" layoutY="200.0" prefHeight="20.0" prefWidth="25.0" text="2v6" />
+      <Label fx:id="q5" layoutX="416.0" layoutY="55.0" prefHeight="20.0" prefWidth="25.0" text="1v3" />
+      <Label fx:id="q52" layoutX="416.0" layoutY="130.0" prefHeight="20.0" prefWidth="25.0" text="5v6" />
+      <Label fx:id="q53" layoutX="416.0" layoutY="200.0" prefHeight="20.0" prefWidth="25.0" text="4v2" />
+      <Button fx:id="SaveBtt" layoutX="463.0" layoutY="377.0" mnemonicParsing="false" onAction="#saveResults" style="-fx-background-color: #FFFFFF;" text="Save">
+         <effect>
+            <DropShadow spread="0.16" />
+         </effect></Button>
+      <TextField fx:id="r1" layoutX="45.0" layoutY="50.0" prefHeight="30.0" prefWidth="59.0" promptText="result">
+         <effect>
+            <DropShadow />
+         </effect></TextField>
+      <Label layoutX="197.0" layoutY="389.0" opacity="0.53" text="Enter Results (int-int)" />
+      <TextField fx:id="r12" layoutX="45.0" layoutY="125.0" prefHeight="30.0" prefWidth="59.0" promptText="result">
+         <effect>
+            <DropShadow />
+         </effect></TextField>
+      <TextField fx:id="r13" layoutX="45.0" layoutY="195.0" prefHeight="30.0" prefWidth="59.0" promptText="result">
+         <effect>
+            <DropShadow />
+         </effect></TextField>
+      <TextField fx:id="r23" layoutX="145.0" layoutY="195.0" prefHeight="30.0" prefWidth="59.0" promptText="result">
+         <effect>
+            <DropShadow />
+         </effect></TextField>
+      <TextField fx:id="r22" layoutX="145.0" layoutY="125.0" prefHeight="30.0" prefWidth="59.0" promptText="result">
+         <effect>
+            <DropShadow />
+         </effect></TextField>
+      <TextField fx:id="r2" layoutX="143.0" layoutY="50.0" prefHeight="30.0" prefWidth="59.0" promptText="result">
+         <effect>
+            <DropShadow />
+         </effect></TextField>
+      <TextField fx:id="r33" layoutX="245.0" layoutY="195.0" prefHeight="30.0" prefWidth="59.0" promptText="result">
+         <effect>
+            <DropShadow />
+         </effect></TextField>
+      <TextField fx:id="r32" layoutX="245.0" layoutY="125.0" prefHeight="30.0" prefWidth="59.0" promptText="result">
+         <effect>
+            <DropShadow />
+         </effect></TextField>
+      <TextField fx:id="r3" layoutX="245.0" layoutY="50.0" prefHeight="30.0" prefWidth="59.0" promptText="result">
+         <effect>
+            <DropShadow />
+         </effect></TextField>
+      <TextField fx:id="r43" layoutX="345.0" layoutY="195.0" prefHeight="30.0" prefWidth="59.0" promptText="result">
+         <effect>
+            <DropShadow />
+         </effect></TextField>
+      <TextField fx:id="r42" layoutX="345.0" layoutY="125.0" prefHeight="30.0" prefWidth="59.0" promptText="result">
+         <effect>
+            <DropShadow />
+         </effect></TextField>
+      <TextField fx:id="r4" layoutX="345.0" layoutY="50.0" prefHeight="30.0" prefWidth="59.0" promptText="result">
+         <effect>
+            <DropShadow />
+         </effect></TextField>
+      <TextField fx:id="r53" layoutX="445.0" layoutY="195.0" prefHeight="30.0" prefWidth="59.0" promptText="result">
+         <effect>
+            <DropShadow />
+         </effect></TextField>
+      <TextField fx:id="r52" layoutX="445.0" layoutY="125.0" prefHeight="30.0" prefWidth="59.0" promptText="result">
+         <effect>
+            <DropShadow />
+         </effect></TextField>
+      <TextField fx:id="r5" layoutX="445.0" layoutY="50.0" prefHeight="30.0" prefWidth="59.0" promptText="result">
+         <effect>
+            <DropShadow />
+         </effect></TextField>
       <Label layoutX="46.0" layoutY="342.0" text="6 = " />
       <Label fx:id="Label6" layoutX="74.0" layoutY="342.0" prefHeight="17.0" prefWidth="125.0" text="Label" />
       <Label fx:id="Label5" layoutX="74.0" layoutY="325.0" prefHeight="17.0" prefWidth="125.0" text="Label" />
