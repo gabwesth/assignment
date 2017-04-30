@@ -49,7 +49,7 @@ public class InfoPageController {
 
         Connection con = DBconnection.getConnection();
         Statement st = con.createStatement();
-        String sql = ("SELECT `Name` FROM `footballtable`.`teams` WHERE `Tournament` = '" + UsePageController.chosenTournament + "' ");
+        String sql = ("SELECT `Name` FROM `footballtable`.`teams` WHERE `Tournament` = '" + UsePageController.tour + "' ");
         ResultSet rs = st.executeQuery(sql);
         while (rs.next()) {
             optionList.add(rs.getString("Name"));

@@ -21,11 +21,12 @@ import java.util.List;
 
 //Page that creates a new Tournament and then Load The Table(for creating Teams and Players).
 public class CreatePageController {
+
     Main scene = new Main();
 
     public static int choice; //variable to store the choosen number of team .
-    public static String TName="";
-    public static int TNumbers;
+    public static String tour="";
+
 
     //ArrayList to store the option visualized in the ChoiceBox "TeamNumbers".
     ObservableList<Integer> optionList = FXCollections.observableArrayList(4,6,8,10);
@@ -49,29 +50,27 @@ public class CreatePageController {
     //Load Table and Create Tournament into DataBase.
     @FXML
     private void LoadTable(ActionEvent event){
-        TName = NewTournamentName.getText(); //can be raplaced with tour?
-        TNumbers = (int) TeamNumbers.getValue();
-        choice = (int) TeamNumbers.getSelectionModel().getSelectedItem();
-        System.out.println("Chosen Value: "+TName +" _ "  + TNumbers);
+        tour = NewTournamentName.getText(); //can be raplaced with tour?
+        choice = (int) TeamNumbers.getValue();
+        System.out.println("Chosen Value: "+tour +" _ "  + choice);
 
             try{
-                String sql = "INSERT INTO `footballtable`.`tournaments` VALUES ('"+TName+"' , '"+TNumbers+"')";
-                System.out.println("SQL statement: "+sql);
-
-                //Create a connection and execute the Statement
                 Connection con = DBconnection.getConnection();
                 Statement stmt = con.createStatement();
+
+                String sql = "INSERT INTO `footballtable`.`tournaments` VALUES ('"+tour+"' , '"+choice+"')";
+                System.out.println("SQL statement: "+sql);
                 stmt.executeUpdate(sql);
 
                 int NumbersOfGames = 0;
-                if(TNumbers == 4){ NumbersOfGames = 6;}
-                if(TNumbers == 6){ NumbersOfGames = 15;}
-                if(TNumbers == 8){NumbersOfGames = 28;}
-                if(TNumbers == 10){ NumbersOfGames = 45;}
+                if(choice == 4){ NumbersOfGames = 6;}
+                if(choice == 6){ NumbersOfGames = 15;}
+                if(choice == 8){NumbersOfGames = 28;}
+                if(choice == 10){ NumbersOfGames = 45;}
 
                 //creates games.
                 for(int i=1; i<=NumbersOfGames; i++){
-                    String GameSql = "INSERT INTO `footballtable`.`games` VALUES (NULL, NULL, NULL, NULL, NULL, NULL , NULL , '" + TName + "')";
+                    String GameSql = "INSERT INTO `footballtable`.`games` VALUES (NULL, NULL, NULL, NULL, NULL, NULL , NULL , '" + tour + "')";
                     System.out.println("game "+i+": "+GameSql);
                     stmt.executeUpdate(GameSql);
                 }

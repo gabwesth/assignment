@@ -10,7 +10,7 @@ public class pointsAndTeams {
 
     public String toString()
     {
-        return team + "" + points;
+        return team + "\t"+ "\t" + points;
     }
 
     public pointsAndTeams(String team, int points){

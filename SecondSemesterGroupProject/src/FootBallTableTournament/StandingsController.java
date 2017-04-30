@@ -1,36 +1,30 @@
 package FootBallTableTournament;
 
-
-import javafx.collections.FXCollections;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
-import javafx.scene.layout.Pane;
-import org.omg.CORBA.Object;
 
-
-import javax.swing.table.TableColumn;
-import javax.swing.text.TableView;
 import java.sql.*;
 import java.util.*;
 
 public class StandingsController {
 
-    String tour = UsePageController.chosenTournament;
+    String tour = UsePageController.tour;
     @FXML
-    private Button test;
+    private Label no1;
     @FXML
-    private TableView table;
+    private Label no2;
     @FXML
-    public void ShowScores(ActionEvent event) throws SQLException {
+    private Label no3;
+    @FXML
+    private Label no4;
+
+    public void ShowScores() throws SQLException {
         try {
             Connection conn = DBconnection.getConnection();
             Statement sta = conn.createStatement();
             String query = ("SELECT `Name`, `Points` FROM `teams` WHERE `Tournament` = '" + tour + "'");
             ArrayList<pointsAndTeams> scoreOfTeams = new ArrayList<>();
             ResultSet rsa = sta.executeQuery(query);
-
             while (rsa.next()) {
                 String teamName = rsa.getString("Name");
                 int points = rsa.getInt("Points");
@@ -42,10 +36,17 @@ public class StandingsController {
                     }
                 });
             }
-            System.out.println(scoreOfTeams);
-
+            no1.setText(String.valueOf(scoreOfTeams.get(3)));
+            no2.setText(String.valueOf(scoreOfTeams.get(2)));
+            no3.setText(String.valueOf(scoreOfTeams.get(1)));
+            no4.setText(String.valueOf(scoreOfTeams.get(0)));
         } catch (SQLException e) {
             e.printStackTrace();
         }
+    }
+
+    @FXML
+    void initialize() throws SQLException{
+        ShowScores();
     }
 }

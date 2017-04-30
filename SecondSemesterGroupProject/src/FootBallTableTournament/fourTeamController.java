@@ -21,7 +21,7 @@ import static jdk.nashorn.internal.runtime.GlobalFunctions.parseInt;
  */
 public class fourTeamController {
     Main scene = new Main();
-    String tour = UsePageController.chosenTournament;
+    String tour = UsePageController.tour;
 
     @FXML
     private Button Save4Button;
