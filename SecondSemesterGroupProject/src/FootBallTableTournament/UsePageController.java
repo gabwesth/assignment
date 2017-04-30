@@ -36,6 +36,10 @@ public class UsePageController {
     private Button BackBtt;
 
     @FXML
+    private Button DeleteBtt;
+
+
+    @FXML
     void goBack(ActionEvent event) {
 
         scene.openWindowAndClose(event,"FirstPage.fxml","Welcome!",395, 251 );
@@ -59,11 +63,7 @@ public class UsePageController {
         return optionList;
     }
 
-    @FXML
-    void initialize() throws SQLException {
-        TournamentsOption.setItems(GetTournamentsName());
-        tour = (String) TournamentsOption.getSelectionModel().getSelectedItem();
-    }
+
 
     @FXML
     void ShowTournamentMenu(ActionEvent event) throws SQLException
@@ -73,6 +73,27 @@ public class UsePageController {
         scene.openWindowAndClose(event,"UsePageMenu.fxml",chosenTournament,394, 251 );
 
 
+    }
+
+    @FXML
+    void DeleteTournament(ActionEvent event) throws SQLException
+    {
+        chosenTournament = (String) TournamentsOption.getValue();
+
+        Connection con = DBconnection.getConnection();
+        Statement st = con.createStatement();
+        String sql = ("DELETE FROM `footballtable`.`tournaments` WHERE `tournaments`.`Name` = '"+chosenTournament+"'");
+        st.executeUpdate(sql);
+        System.out.println(sql);
+        System.out.println(chosenTournament + " Tournament has been Deleted");
+        con.close();
+    }
+
+
+    @FXML
+    void initialize() throws SQLException {
+        TournamentsOption.setItems(GetTournamentsName());
+        tour = (String) TournamentsOption.getSelectionModel().getSelectedItem();
     }
 
 }
