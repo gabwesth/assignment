@@ -1,48 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.control.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.Pane?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="339.0" prefWidth="698.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FootBallTableTournament.eightTeamController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="456.0" prefWidth="790.0" xmlns="http://javafx.com/javafx/8.0.101" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FootBallTableTournament.eightTeamController">
    <children>
       <Label layoutY="20.0" text="Round 1" />
       <Label layoutX="100.0" layoutY="20.0" text="Round 2" />
       <Label layoutX="200.0" layoutY="20.0" text="Round 3" />
       <Label layoutX="300.0" layoutY="20.0" text="Round 4" />
       <Label layoutX="400.0" layoutY="20.0" text="Round 5" />
-      <Label layoutY="55.0" prefHeight="20.0" prefWidth="52.0" text="1v2" textAlignment="CENTER" />
-      <Label layoutY="130.0" prefHeight="20.0" prefWidth="52.0" text="3v8" />
-      <Label layoutY="200.0" prefHeight="20.0" prefWidth="52.0" text="4v7" />
-      <Label layoutX="100.0" layoutY="55.0" prefHeight="20.0" prefWidth="52.0" text="1v7" />
-      <Label layoutX="100.0" layoutY="130.0" prefHeight="20.0" prefWidth="52.0" text="3v4" />
-      <Label layoutX="100.0" layoutY="200.0" prefHeight="20.0" prefWidth="52.0" text="2v5" />
-      <Label layoutX="200.0" layoutY="55.0" prefHeight="20.0" prefWidth="52.0" text="1v4" />
-      <Label layoutX="200.0" layoutY="130.0" prefHeight="20.0" prefWidth="52.0" text="3v5" />
-      <Label layoutX="200.0" layoutY="200.0" prefHeight="20.0" prefWidth="52.0" text="2v6" />
-      <Label layoutX="300.0" layoutY="55.0" prefHeight="20.0" prefWidth="52.0" text="1v6" />
-      <Label layoutX="300.0" layoutY="130.0" prefHeight="20.0" prefWidth="52.0" text="3v2" />
-      <Label layoutX="300.0" layoutY="200.0" prefHeight="20.0" prefWidth="52.0" text="4v8" />
-      <Label layoutX="400.0" layoutY="55.0" prefHeight="20.0" prefWidth="52.0" text="1v3" />
-      <Label layoutX="400.0" layoutY="130.0" prefHeight="20.0" prefWidth="52.0" text="5v8" />
-      <Label layoutX="400.0" layoutY="200.0" prefHeight="20.0" prefWidth="52.0" text="4v2" />
+      <Label fx:id="m1" layoutY="55.0" prefHeight="20.0" prefWidth="52.0" text="1v2" textAlignment="CENTER" />
+      <Label fx:id="m12" layoutY="130.0" prefHeight="20.0" prefWidth="52.0" text="3v8" />
+      <Label fx:id="m13" layoutY="200.0" prefHeight="20.0" prefWidth="52.0" text="4v7" />
+      <Label fx:id="m2" layoutX="100.0" layoutY="55.0" prefHeight="20.0" prefWidth="52.0" text="1v7" />
+      <Label fx:id="m22" layoutX="100.0" layoutY="130.0" prefHeight="20.0" prefWidth="52.0" text="3v4" />
+      <Label fx:id="m23" layoutX="100.0" layoutY="200.0" prefHeight="20.0" prefWidth="52.0" text="2v5" />
+      <Label fx:id="m3" layoutX="200.0" layoutY="55.0" prefHeight="20.0" prefWidth="52.0" text="1v4" />
+      <Label fx:id="m32" layoutX="200.0" layoutY="130.0" prefHeight="20.0" prefWidth="52.0" text="3v5" />
+      <Label fx:id="m33" layoutX="200.0" layoutY="200.0" prefHeight="20.0" prefWidth="52.0" text="2v6" />
+      <Label fx:id="m4" layoutX="300.0" layoutY="55.0" prefHeight="20.0" prefWidth="52.0" text="1v6" />
+      <Label fx:id="m42" layoutX="300.0" layoutY="130.0" prefHeight="20.0" prefWidth="52.0" text="3v2" />
+      <Label fx:id="m43" layoutX="300.0" layoutY="200.0" prefHeight="20.0" prefWidth="52.0" text="4v8" />
+      <Label fx:id="m5" layoutX="400.0" layoutY="55.0" prefHeight="20.0" prefWidth="52.0" text="1v3" />
+      <Label fx:id="m52" layoutX="400.0" layoutY="130.0" prefHeight="20.0" prefWidth="52.0" text="5v8" />
+      <Label fx:id="m53" layoutX="400.0" layoutY="200.0" prefHeight="20.0" prefWidth="52.0" text="4v2" />
       <Label layoutX="500.0" layoutY="20.0" text="Round 6" />
       <Label layoutX="600.0" layoutY="20.0" text="Round 7" />
-      <Label layoutY="270.0" prefHeight="20.0" prefWidth="52.0" text="5v6" />
-      <Label layoutX="100.0" layoutY="270.0" prefHeight="20.0" prefWidth="52.0" text="8v6" />
-      <Label layoutX="200.0" layoutY="270.0" prefHeight="20.0" prefWidth="52.0" text="7v8" />
-      <Label layoutX="300.0" layoutY="270.0" prefHeight="20.0" prefWidth="52.0" text="7v5" />
-      <Label layoutX="400.0" layoutY="270.0" prefHeight="20.0" prefWidth="52.0" text="7v6" />
-      <Label layoutX="500.0" layoutY="270.0" prefHeight="20.0" prefWidth="52.0" text="4v5" />
-      <Label layoutX="500.0" layoutY="200.0" prefHeight="20.0" prefWidth="52.0" text="2v7" />
-      <Label layoutX="500.0" layoutY="130.0" prefHeight="20.0" prefWidth="52.0" text="3v6" />
-      <Label layoutX="500.0" layoutY="55.0" prefHeight="20.0" prefWidth="52.0" text="1v8" />
-      <Label layoutX="600.0" layoutY="55.0" prefHeight="20.0" prefWidth="52.0" text="1v5" />
-      <Label layoutX="600.0" layoutY="130.0" prefHeight="20.0" prefWidth="52.0" text="3v7" />
-      <Label layoutX="600.0" layoutY="200.0" prefHeight="20.0" prefWidth="52.0" text="4v6" />
-      <Label layoutX="600.0" layoutY="270.0" prefHeight="20.0" prefWidth="52.0" text="2v8" />
-      <Button fx:id="Save8Button" layoutX="636.0" layoutY="302.0" mnemonicParsing="false" text="Save" />
+      <Label fx:id="m14" layoutY="270.0" prefHeight="20.0" prefWidth="52.0" text="5v6" />
+      <Label fx:id="m24" layoutX="100.0" layoutY="270.0" prefHeight="20.0" prefWidth="52.0" text="8v6" />
+      <Label fx:id="m34" layoutX="200.0" layoutY="270.0" prefHeight="20.0" prefWidth="52.0" text="7v8" />
+      <Label fx:id="m44" layoutX="300.0" layoutY="270.0" prefHeight="20.0" prefWidth="52.0" text="7v5" />
+      <Label fx:id="m54" layoutX="400.0" layoutY="270.0" prefHeight="20.0" prefWidth="52.0" text="7v6" />
+      <Label fx:id="m64" layoutX="500.0" layoutY="270.0" prefHeight="20.0" prefWidth="52.0" text="4v5" />
+      <Label fx:id="m63" layoutX="500.0" layoutY="200.0" prefHeight="20.0" prefWidth="52.0" text="2v7" />
+      <Label fx:id="m62" layoutX="500.0" layoutY="130.0" prefHeight="20.0" prefWidth="52.0" text="3v6" />
+      <Label fx:id="m6" layoutX="500.0" layoutY="55.0" prefHeight="20.0" prefWidth="52.0" text="1v8" />
+      <Label fx:id="m7" layoutX="600.0" layoutY="55.0" prefHeight="20.0" prefWidth="52.0" text="1v5" />
+      <Label fx:id="m72" layoutX="600.0" layoutY="130.0" prefHeight="20.0" prefWidth="52.0" text="3v7" />
+      <Label fx:id="m73" layoutX="600.0" layoutY="200.0" prefHeight="20.0" prefWidth="52.0" text="4v6" />
+      <Label fx:id="m74" layoutX="600.0" layoutY="270.0" prefHeight="20.0" prefWidth="52.0" text="2v8" />
+      <Button fx:id="SaveBtt" layoutX="636.0" layoutY="302.0" mnemonicParsing="false" onAction="#saveResults" text="Save" />
       <TextField fx:id="r1" layoutX="26.0" layoutY="48.0" prefHeight="30.0" prefWidth="70.0" promptText="result" />
       <Label layoutX="277.0" layoutY="307.0" opacity="0.53" text="Enter Results (int-int)" />
       <TextField fx:id="r12" layoutX="26.0" layoutY="123.0" prefHeight="30.0" prefWidth="70.0" promptText="result" />
@@ -72,5 +72,21 @@
       <TextField fx:id="r73" layoutX="625.0" layoutY="192.0" prefHeight="30.0" prefWidth="70.0" promptText="result" />
       <TextField fx:id="r72" layoutX="625.0" layoutY="122.0" prefHeight="30.0" prefWidth="70.0" promptText="result" />
       <TextField fx:id="r7" layoutX="625.0" layoutY="47.0" prefHeight="30.0" prefWidth="70.0" promptText="result" />
+      <Label layoutX="76.0" layoutY="355.0" text="4 =" />
+      <Label fx:id="Label4" layoutX="104.0" layoutY="355.0" prefHeight="17.0" prefWidth="125.0" text="Label" />
+      <Label layoutX="76.0" layoutY="338.0" text="3 =" />
+      <Label fx:id="Label3" layoutX="104.0" layoutY="338.0" prefHeight="17.0" prefWidth="125.0" text="Label" />
+      <Label layoutX="76.0" layoutY="321.0" text="2 =" />
+      <Label fx:id="Label2" layoutX="104.0" layoutY="321.0" prefHeight="17.0" prefWidth="125.0" text="Label" />
+      <Label fx:id="Label1" layoutX="104.0" layoutY="304.0" prefHeight="17.0" prefWidth="125.0" text="Label" />
+      <Label layoutX="76.0" layoutY="304.0" text="1 =" />
+      <Label layoutX="76.0" layoutY="375.0" text="5 = " />
+      <Label fx:id="Label5" layoutX="104.0" layoutY="375.0" prefHeight="17.0" prefWidth="125.0" text="Label" />
+      <Label fx:id="Label6" layoutX="104.0" layoutY="392.0" prefHeight="17.0" prefWidth="125.0" text="Label" />
+      <Label layoutX="76.0" layoutY="392.0" text="6 = " />
+      <Label fx:id="Label7" layoutX="104.0" layoutY="409.0" prefHeight="17.0" prefWidth="125.0" text="Label" />
+      <Label layoutX="76.0" layoutY="409.0" text="7 = " />
+      <Label fx:id="Label8" layoutX="104.0" layoutY="426.0" prefHeight="17.0" prefWidth="125.0" text="Label" />
+      <Label layoutX="76.0" layoutY="426.0" text="8 = " />
    </children>
 </Pane>
