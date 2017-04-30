@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
 <?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
@@ -9,12 +10,24 @@
 
 <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="250.0" prefWidth="394.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FootBallTableTournament.UsePageMenuController">
     <children>
-        <Pane prefHeight="238.0" prefWidth="473.0">
+        <Pane prefHeight="238.0" prefWidth="473.0" style="-fx-background-color: #8AB7EE;">
             <children>
-                <Button fx:id="StandingsBtt" layoutX="50.0" layoutY="50.0" mnemonicParsing="false" onAction="#standings" prefHeight="31.0" prefWidth="85.0" text="Standings" />
-                <Button fx:id="infoBtt" layoutX="262.0" layoutY="50.0" mnemonicParsing="false" onAction="#loadInfo" prefHeight="31.0" prefWidth="85.0" text="Info" />
-                <Button fx:id="ScheduleBtt" layoutX="50.0" layoutY="162.0" mnemonicParsing="false" onAction="#loadScheadule" prefHeight="31.0" prefWidth="85.0" text="Schedule" />
-                <Button fx:id="BackBtt" layoutX="262.0" layoutY="162.0" mnemonicParsing="false" onAction="#goBack" prefHeight="31.0" prefWidth="85.0" text="Back" />
+                <Button fx:id="StandingsBtt" layoutX="50.0" layoutY="50.0" mnemonicParsing="false" onAction="#standings" prefHeight="31.0" prefWidth="85.0" style="-fx-background-color: #FFFFFF;" text="Standings">
+               <effect>
+                  <DropShadow />
+               </effect></Button>
+                <Button fx:id="infoBtt" layoutX="262.0" layoutY="50.0" mnemonicParsing="false" onAction="#loadInfo" prefHeight="31.0" prefWidth="85.0" style="-fx-background-color: #FFFFFF;" text="Info">
+               <effect>
+                  <DropShadow />
+               </effect></Button>
+                <Button fx:id="ScheduleBtt" layoutX="50.0" layoutY="162.0" mnemonicParsing="false" onAction="#loadScheadule" prefHeight="31.0" prefWidth="85.0" style="-fx-background-color: #FFFFFF;" text="Schedule">
+               <effect>
+                  <DropShadow />
+               </effect></Button>
+                <Button fx:id="BackBtt" layoutX="262.0" layoutY="162.0" mnemonicParsing="false" onAction="#goBack" prefHeight="31.0" prefWidth="85.0" style="-fx-background-color: #FFFFFF;" text="Back">
+               <effect>
+                  <DropShadow />
+               </effect></Button>
             </children>
         </Pane>
     </children>

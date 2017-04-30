@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
 <?import java.lang.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
@@ -8,7 +9,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.Pane?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="456.0" prefWidth="790.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FootBallTableTournament.eightTeamController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="456.0" prefWidth="790.0" style="-fx-background-color: #8AB7EE;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="FootBallTableTournament.eightTeamController">
    <children>
       <Label layoutX="87.0" layoutY="26.0" text="Round 1" />
       <Label layoutX="187.0" layoutY="26.0" text="Round 2" />
@@ -45,36 +46,123 @@
       <Label fx:id="m72" layoutX="648.0" layoutY="136.0" prefHeight="20.0" prefWidth="52.0" text="3v7" />
       <Label fx:id="m73" layoutX="648.0" layoutY="206.0" prefHeight="20.0" prefWidth="52.0" text="4v6" />
       <Label fx:id="m74" layoutX="648.0" layoutY="276.0" prefHeight="20.0" prefWidth="52.0" text="2v8" />
-      <Button fx:id="SaveBtt" layoutX="725.0" layoutY="414.0" mnemonicParsing="false" onAction="#saveResults" text="Save" />
-      <TextField fx:id="r1" layoutX="74.0" layoutY="54.0" prefHeight="30.0" prefWidth="70.0" promptText="result" />
+      <Button fx:id="SaveBtt" layoutX="725.0" layoutY="414.0" mnemonicParsing="false" onAction="#saveResults" style="-fx-background-color: #FFFFFF;" text="Save">
+         <effect>
+            <DropShadow spread="0.18" />
+         </effect></Button>
+      <TextField fx:id="r1" layoutX="74.0" layoutY="54.0" prefHeight="30.0" prefWidth="70.0" promptText="result">
+         <effect>
+            <DropShadow spread="0.04" />
+         </effect></TextField>
       <Label layoutX="332.0" layoutY="426.0" opacity="0.53" text="Enter Results (int-int)" />
-      <TextField fx:id="r12" layoutX="74.0" layoutY="129.0" prefHeight="30.0" prefWidth="70.0" promptText="result" />
-      <TextField fx:id="r13" layoutX="74.0" layoutY="199.0" prefHeight="30.0" prefWidth="70.0" promptText="result" />
-      <TextField fx:id="r14" layoutX="74.0" layoutY="269.0" prefHeight="30.0" prefWidth="70.0" promptText="result" />
-      <TextField fx:id="r24" layoutX="174.0" layoutY="269.0" prefHeight="30.0" prefWidth="70.0" promptText="result" />
-      <TextField fx:id="r23" layoutX="174.0" layoutY="199.0" prefHeight="30.0" prefWidth="70.0" promptText="result" />
-      <TextField fx:id="r22" layoutX="174.0" layoutY="129.0" prefHeight="30.0" prefWidth="70.0" promptText="result" />
-      <TextField fx:id="r2" layoutX="174.0" layoutY="54.0" prefHeight="30.0" prefWidth="70.0" promptText="result" />
-      <TextField fx:id="r34" layoutX="274.0" layoutY="269.0" prefHeight="30.0" prefWidth="70.0" promptText="result" />
-      <TextField fx:id="r33" layoutX="274.0" layoutY="199.0" prefHeight="30.0" prefWidth="70.0" promptText="result" />
-      <TextField fx:id="r32" layoutX="274.0" layoutY="129.0" prefHeight="30.0" prefWidth="70.0" promptText="result" />
-      <TextField fx:id="r3" layoutX="274.0" layoutY="54.0" prefHeight="30.0" prefWidth="70.0" promptText="result" />
-      <TextField fx:id="r44" layoutX="374.0" layoutY="268.0" prefHeight="30.0" prefWidth="70.0" promptText="result" />
-      <TextField fx:id="r43" layoutX="374.0" layoutY="198.0" prefHeight="30.0" prefWidth="70.0" promptText="result" />
-      <TextField fx:id="r42" layoutX="374.0" layoutY="128.0" prefHeight="30.0" prefWidth="70.0" promptText="result" />
-      <TextField fx:id="r4" layoutX="374.0" layoutY="53.0" prefHeight="30.0" prefWidth="70.0" promptText="result" />
-      <TextField fx:id="r54" layoutX="474.0" layoutY="268.0" prefHeight="30.0" prefWidth="70.0" promptText="result" />
-      <TextField fx:id="r53" layoutX="474.0" layoutY="198.0" prefHeight="30.0" prefWidth="70.0" promptText="result" />
-      <TextField fx:id="r52" layoutX="474.0" layoutY="128.0" prefHeight="30.0" prefWidth="70.0" promptText="result" />
-      <TextField fx:id="r5" layoutX="474.0" layoutY="53.0" prefHeight="30.0" prefWidth="70.0" promptText="result" />
-      <TextField fx:id="r64" layoutX="574.0" layoutY="269.0" prefHeight="30.0" prefWidth="70.0" promptText="result" />
-      <TextField fx:id="r63" layoutX="574.0" layoutY="199.0" prefHeight="30.0" prefWidth="70.0" promptText="result" />
-      <TextField fx:id="r62" layoutX="573.0" layoutY="128.0" prefHeight="30.0" prefWidth="70.0" promptText="result" />
-      <TextField fx:id="r6" layoutX="573.0" layoutY="53.0" prefHeight="30.0" prefWidth="70.0" promptText="result" />
-      <TextField fx:id="r74" layoutX="673.0" layoutY="271.0" prefHeight="30.0" prefWidth="70.0" promptText="result" />
-      <TextField fx:id="r73" layoutX="673.0" layoutY="198.0" prefHeight="30.0" prefWidth="70.0" promptText="result" />
-      <TextField fx:id="r72" layoutX="673.0" layoutY="128.0" prefHeight="30.0" prefWidth="70.0" promptText="result" />
-      <TextField fx:id="r7" layoutX="673.0" layoutY="53.0" prefHeight="30.0" prefWidth="70.0" promptText="result" />
+      <TextField fx:id="r12" layoutX="74.0" layoutY="129.0" prefHeight="30.0" prefWidth="70.0" promptText="result">
+         <effect>
+            <DropShadow spread="0.04" />
+         </effect></TextField>
+      <TextField fx:id="r13" layoutX="74.0" layoutY="199.0" prefHeight="30.0" prefWidth="70.0" promptText="result">
+         <effect>
+            <DropShadow spread="0.04" />
+         </effect></TextField>
+      <TextField fx:id="r14" layoutX="74.0" layoutY="269.0" prefHeight="30.0" prefWidth="70.0" promptText="result">
+         <effect>
+            <DropShadow spread="0.04" />
+         </effect></TextField>
+      <TextField fx:id="r24" layoutX="174.0" layoutY="269.0" prefHeight="30.0" prefWidth="70.0" promptText="result">
+         <effect>
+            <DropShadow spread="0.04" />
+         </effect></TextField>
+      <TextField fx:id="r23" layoutX="174.0" layoutY="199.0" prefHeight="30.0" prefWidth="70.0" promptText="result">
+         <effect>
+            <DropShadow spread="0.04" />
+         </effect></TextField>
+      <TextField fx:id="r22" layoutX="174.0" layoutY="129.0" prefHeight="30.0" prefWidth="70.0" promptText="result">
+         <effect>
+            <DropShadow spread="0.04" />
+         </effect></TextField>
+      <TextField fx:id="r2" layoutX="174.0" layoutY="54.0" prefHeight="30.0" prefWidth="70.0" promptText="result">
+         <effect>
+            <DropShadow spread="0.04" />
+         </effect></TextField>
+      <TextField fx:id="r34" layoutX="274.0" layoutY="269.0" prefHeight="30.0" prefWidth="70.0" promptText="result">
+         <effect>
+            <DropShadow spread="0.04" />
+         </effect></TextField>
+      <TextField fx:id="r33" layoutX="274.0" layoutY="199.0" prefHeight="30.0" prefWidth="70.0" promptText="result">
+         <effect>
+            <DropShadow spread="0.04" />
+         </effect></TextField>
+      <TextField fx:id="r32" layoutX="274.0" layoutY="129.0" prefHeight="30.0" prefWidth="70.0" promptText="result">
+         <effect>
+            <DropShadow spread="0.04" />
+         </effect></TextField>
+      <TextField fx:id="r3" layoutX="274.0" layoutY="54.0" prefHeight="30.0" prefWidth="70.0" promptText="result">
+         <effect>
+            <DropShadow spread="0.04" />
+         </effect></TextField>
+      <TextField fx:id="r44" layoutX="374.0" layoutY="268.0" prefHeight="30.0" prefWidth="70.0" promptText="result">
+         <effect>
+            <DropShadow spread="0.04" />
+         </effect></TextField>
+      <TextField fx:id="r43" layoutX="374.0" layoutY="198.0" prefHeight="30.0" prefWidth="70.0" promptText="result">
+         <effect>
+            <DropShadow spread="0.04" />
+         </effect></TextField>
+      <TextField fx:id="r42" layoutX="374.0" layoutY="128.0" prefHeight="30.0" prefWidth="70.0" promptText="result">
+         <effect>
+            <DropShadow spread="0.04" />
+         </effect></TextField>
+      <TextField fx:id="r4" layoutX="374.0" layoutY="53.0" prefHeight="30.0" prefWidth="70.0" promptText="result">
+         <effect>
+            <DropShadow spread="0.04" />
+         </effect></TextField>
+      <TextField fx:id="r54" layoutX="474.0" layoutY="268.0" prefHeight="30.0" prefWidth="70.0" promptText="result">
+         <effect>
+            <DropShadow spread="0.04" />
+         </effect></TextField>
+      <TextField fx:id="r53" layoutX="474.0" layoutY="198.0" prefHeight="30.0" prefWidth="70.0" promptText="result">
+         <effect>
+            <DropShadow spread="0.04" />
+         </effect></TextField>
+      <TextField fx:id="r52" layoutX="474.0" layoutY="128.0" prefHeight="30.0" prefWidth="70.0" promptText="result">
+         <effect>
+            <DropShadow spread="0.04" />
+         </effect></TextField>
+      <TextField fx:id="r5" layoutX="474.0" layoutY="53.0" prefHeight="30.0" prefWidth="70.0" promptText="result">
+         <effect>
+            <DropShadow spread="0.04" />
+         </effect></TextField>
+      <TextField fx:id="r64" layoutX="574.0" layoutY="269.0" prefHeight="30.0" prefWidth="70.0" promptText="result">
+         <effect>
+            <DropShadow spread="0.04" />
+         </effect></TextField>
+      <TextField fx:id="r63" layoutX="574.0" layoutY="199.0" prefHeight="30.0" prefWidth="70.0" promptText="result">
+         <effect>
+            <DropShadow spread="0.04" />
+         </effect></TextField>
+      <TextField fx:id="r62" layoutX="573.0" layoutY="128.0" prefHeight="30.0" prefWidth="70.0" promptText="result">
+         <effect>
+            <DropShadow spread="0.04" />
+         </effect></TextField>
+      <TextField fx:id="r6" layoutX="573.0" layoutY="53.0" prefHeight="30.0" prefWidth="70.0" promptText="result">
+         <effect>
+            <DropShadow spread="0.04" />
+         </effect></TextField>
+      <TextField fx:id="r74" layoutX="673.0" layoutY="271.0" prefHeight="30.0" prefWidth="70.0" promptText="result">
+         <effect>
+            <DropShadow spread="0.04" />
+         </effect></TextField>
+      <TextField fx:id="r73" layoutX="673.0" layoutY="198.0" prefHeight="30.0" prefWidth="70.0" promptText="result">
+         <effect>
+            <DropShadow spread="0.04" />
+         </effect></TextField>
+      <TextField fx:id="r72" layoutX="673.0" layoutY="128.0" prefHeight="30.0" prefWidth="70.0" promptText="result">
+         <effect>
+            <DropShadow spread="0.04" />
+         </effect></TextField>
+      <TextField fx:id="r7" layoutX="673.0" layoutY="53.0" prefHeight="30.0" prefWidth="70.0" promptText="result">
+         <effect>
+            <DropShadow spread="0.04" />
+         </effect></TextField>
       <Label layoutX="76.0" layoutY="355.0" text="4 =" />
       <Label fx:id="Label4" layoutX="104.0" layoutY="355.0" prefHeight="17.0" prefWidth="125.0" text="Label" />
       <Label layoutX="76.0" layoutY="338.0" text="3 =" />
