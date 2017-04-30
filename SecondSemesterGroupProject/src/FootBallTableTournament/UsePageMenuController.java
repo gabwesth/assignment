@@ -66,7 +66,7 @@ public class UsePageMenuController {
         if(selection == 6) {
             scene.openWindowAndClose(event,"sixStanding.fxml","New Tournament", 737, 533 );        }
         if(selection == 8) {
-            scene.openWindow(event,"eightStandings.fxml","8-Team Tournament",700,322 );
+            scene.openWindow(event,"eightStanding.fxml","8-Team Tournament",700,322 );
         }
     }
 
