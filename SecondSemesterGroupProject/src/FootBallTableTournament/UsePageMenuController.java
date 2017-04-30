@@ -48,6 +48,10 @@ public class UsePageMenuController {
             //Load the previous page
         scene.openWindowAndClose(event,"UsePage.fxml","New Tournament", 737, 533 );
     }
+    public void standings(ActionEvent event){
+        //Load the previous page
+        scene.openWindowAndClose(event,"Standings.fxml","New Tournament", 737, 533 );
+    }
 
     public void loadScheadule(ActionEvent event){
                 int selection = 0;
