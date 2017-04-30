@@ -26,7 +26,7 @@
       <TextField fx:id="r3" layoutX="400.0" layoutY="55.0" prefHeight="30.0" prefWidth="106.0" promptText="result" />
       <TextField fx:id="r32" layoutX="400.0" layoutY="121.0" prefHeight="30.0" prefWidth="106.0" promptText="result" />
       <Button fx:id="Save4Button" layoutX="545.0" layoutY="279.0" mnemonicParsing="false" onAction="#saveResults" text="Save" />
-      <Label layoutX="257.0" layoutY="291.0" opacity="0.53" text="Enter Results (int, int)" />
+      <Label layoutX="257.0" layoutY="291.0" opacity="0.53" text="Enter Results (int-int)" />
       <Label layoutX="85.0" layoutY="191.0" text="1 =" />
       <Label fx:id="Label1" layoutX="113.0" layoutY="191.0" prefHeight="17.0" prefWidth="125.0" text="Label" />
       <Label fx:id="Label2" layoutX="113.0" layoutY="208.0" prefHeight="17.0" prefWidth="125.0" text="Label" />

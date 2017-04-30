@@ -34,14 +34,8 @@ public class UsePageMenuController {
         scene.openWindowAndClose(event,"UsePage.fxml","Select Tournament", 394, 251 );
     }
     @FXML
-    public void addNewTeam(ActionEvent event){
-        // add a new team
-        //tc.SaveOnDB();
-    }
-
-    @FXML
     public void loadInfo(ActionEvent event) {
-        scene.openWindowAndClose(event, "InfoPage.fxml", "Team Info", 500, 350);
+        scene.openWindowAndClose(event, "InfoPage.fxml", "Team Info", 550, 350);
     }
 
     public void getMenu(ActionEvent event){

@@ -44,7 +44,7 @@
       <Label layoutX="600.0" layoutY="270.0" prefHeight="20.0" prefWidth="52.0" text="2v8" />
       <Button fx:id="Save8Button" layoutX="636.0" layoutY="302.0" mnemonicParsing="false" text="Save" />
       <TextField fx:id="r1" layoutX="26.0" layoutY="48.0" prefHeight="30.0" prefWidth="70.0" promptText="result" />
-      <Label layoutX="277.0" layoutY="307.0" opacity="0.53" text="Enter Results (int, int)" />
+      <Label layoutX="277.0" layoutY="307.0" opacity="0.53" text="Enter Results (int-int)" />
       <TextField fx:id="r12" layoutX="26.0" layoutY="123.0" prefHeight="30.0" prefWidth="70.0" promptText="result" />
       <TextField fx:id="r13" layoutX="26.0" layoutY="193.0" prefHeight="30.0" prefWidth="70.0" promptText="result" />
       <TextField fx:id="r14" layoutX="26.0" layoutY="263.0" prefHeight="30.0" prefWidth="70.0" promptText="result" />
