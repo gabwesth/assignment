@@ -67,14 +67,12 @@ public class UsePageMenuController {
                     scene.openWindow(event,"fourTeamSchedule.fxml","4-Team Tournament!",600,322 );
                 }
                 if(selection == 6) {
-                    scene.openWindow(event,"sixTeamSchedule.fxml","6-Team Tournament!",525,322 );
+                    scene.openWindow(event,"sixTeamSchedule.fxml","6-Team Tournament!",524,411 );
                 }
                 if(selection == 8) {
-                    scene.openWindow(event,"eightTeamSchedule.fxml","8-Team Tournament",700,322 );
+                    scene.openWindow(event,"eightTeamSchedule.fxml","8-Team Tournament",790,456 );
                 }
-                if(selection == 10) {
-                    scene.openWindow(event,"tenTeamSchedule.fxml","10-Team Tournament",900,322 );
-                }
+
     }
 }
 

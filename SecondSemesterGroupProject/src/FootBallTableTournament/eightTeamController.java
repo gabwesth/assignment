@@ -16,10 +16,10 @@ import java.sql.Statement;
  */
 public class eightTeamController {
     Main scene = new Main();
-    String tour = UsePageController.chosenTournament;
+    String tour = UsePageController.tour;
 
     @FXML
-    private Button Save8Button;
+    private Button SaveBtt;
     @FXML
     private TextField r1;
     @FXML
