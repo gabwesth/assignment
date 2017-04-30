@@ -71,16 +71,16 @@ public class UsePageMenuController {
                 }
 
                 if(selection== 4) {
-                    scene.openWindow(event,"fourTeamSchedule.fxml","4-Team Tournament!",600,217 );
+                    scene.openWindow(event,"fourTeamSchedule.fxml","4-Team Tournament!",600,322 );
                 }
                 if(selection == 6) {
-                    scene.openWindow(event,"sixTeamSchedule.fxml","6-Team Tournament!",525,280 );
+                    scene.openWindow(event,"sixTeamSchedule.fxml","6-Team Tournament!",525,322 );
                 }
                 if(selection == 8) {
-                    scene.openWindow(event,"eightTeamSchedule.fxml","8-Team Tournament",700,340 );
+                    scene.openWindow(event,"eightTeamSchedule.fxml","8-Team Tournament",700,322 );
                 }
                 if(selection == 10) {
-                    scene.openWindow(event,"tenTeamSchedule.fxml","10-Team Tournament",900,400 );
+                    scene.openWindow(event,"tenTeamSchedule.fxml","10-Team Tournament",900,322 );
                 }
     }
 }
