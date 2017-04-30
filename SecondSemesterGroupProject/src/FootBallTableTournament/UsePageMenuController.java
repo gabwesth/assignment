@@ -51,7 +51,7 @@ public class UsePageMenuController {
     }
     @FXML
     public void loadInfo(ActionEvent event) {
-        scene.openWindowAndClose(event, "InfoPage.fxml", "Team Info", 483, 315);
+        scene.openWindowAndClose(event, "InfoPage.fxml", "Team Info", 550, 350);
     }
 
     public void getMenu(ActionEvent event){
@@ -62,11 +62,11 @@ public class UsePageMenuController {
         NoOfTeams();
         //Load the previous page
         if(selection== 4) {
-            scene.openWindow(event,"Standings.fxml","New Tournament", 247, 318 );        }
+            scene.openWindow(event,"Standings.fxml","New Tournament", 200, 300 );        }
         if(selection == 6) {
-            scene.openWindow(event,"sixStanding.fxml","New Tournament", 215, 351 );        }
+            scene.openWindow(event,"sixStanding.fxml","New Tournament", 250, 400 );        }
         if(selection == 8) {
-            scene.openWindow(event,"eightStanding.fxml","8-Team Tournament",216,400 );
+            scene.openWindow(event,"eightStanding.fxml","8-Team Tournament",250,500 );
         }
     }
 
@@ -76,10 +76,10 @@ public class UsePageMenuController {
                     scene.openWindow(event,"fourTeamSchedule.fxml","4-Team Tournament!",600,322 );
                 }
                 if(selection == 6) {
-                    scene.openWindow(event,"sixTeamSchedule.fxml","6-Team Tournament!",525,322 );
+                    scene.openWindow(event,"sixTeamSchedule.fxml","6-Team Tournament!",525,415 );
                 }
                 if(selection == 8) {
-                    scene.openWindow(event,"eightTeamSchedule.fxml","8-Team Tournament",700,322 );
+                    scene.openWindow(event,"eightTeamSchedule.fxml","8-Team Tournament",790,460 );
                 }
     }
 }

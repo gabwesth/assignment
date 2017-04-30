@@ -60,7 +60,7 @@ public class InfoPageController {
 
     @FXML
     void initialize() throws SQLException {
-        ChooseTeam.setItems(GetTeamName());
+        ChooseTeam.setItems(GetTeamName());https://codeshare.io/new
         tour = (String) ChooseTeam.getSelectionModel().getSelectedItem();
         editInfo.setOpacity(0);
         saveInfo.setOpacity(0);
@@ -83,43 +83,45 @@ public class InfoPageController {
     void displayInfoBtt(ActionEvent event) throws SQLException {
         teamInfoDialogue();
         editInfo.setOpacity(1);
+        saveInfo.setOpacity(0);
 
-        }
-        @FXML
-        void saveInfoBtt(ActionEvent event) throws SQLException{ //This gives an SQL syntax error at line 100 and I've no idea how to fix it
+    }
+    @FXML
+    void saveInfoBtt(ActionEvent event) throws SQLException{ //This gives an SQL syntax error at line 100 and I've no idea how to fix it
 
-           editInfo.setOpacity(1);
-           String namea = name1.getText();
-            String emaila = email1.getText();
-            String doba = dob1.getText();
-            String tm = teamname.getText();
-            String nameb = name2.getText();
-            String emailb = email2.getText();
-            String dobb = dob2.getText();
-            int resSet;
-            int resSet1;
-            Connection connn = DBconnection.getConnection();
-            String savSQL = "UPDATE `footballtable`.`players` SET `Name` = '"+ namea +"',`DateOfBirth` = '"+ doba +"',`Email` = '"+ emaila +"',`TeamID` = '"+ tm + "'WHERE `ID` = "+userID;
-            String savSQL1 = "UPDATE `footballtable`.`players` SET `Name` = '"+ nameb +"',`DateOfBirth` = '"+ dobb +"',`Email` = '"+ emailb +"',`TeamID` = '"+ tm + "'WHERE `ID` = "+finalID;
-            PreparedStatement st = connn.prepareStatement(savSQL);
-            PreparedStatement sta = connn.prepareStatement(savSQL1);
-            resSet = st.executeUpdate(savSQL);
-            resSet1 = sta.executeUpdate(savSQL1);
-            System.out.println(resSet);
-            System.out.println(resSet1);
-            connn.close();
-            saveInfo.setOpacity(0);
-            JOptionPane.showMessageDialog(null,
-                    "Update saved successfully to database",
-                    "Saved Successfully",
-                    JOptionPane.INFORMATION_MESSAGE);
-            name1.setEditable(false);
-            email1.setEditable(false);
-            dob1.setEditable(false);
-            name2.setEditable(false);
-            email2.setEditable(false);
-            dob2.setEditable(false);
-        }
+        String namea = name1.getText();
+        String emaila = email1.getText();
+        String doba = dob1.getText();
+        String tm = teamname.getText();
+        String nameb = name2.getText();
+        String emailb = email2.getText();
+        String dobb = dob2.getText();
+        name1.setEditable(false);
+        email1.setEditable(false);
+        dob1.setEditable(false);
+        name2.setEditable(false);
+        email2.setEditable(false);
+        dob2.setEditable(false);
+        int resSet;
+        int resSet1;
+        Connection connn = DBconnection.getConnection();
+        String savSQL = "UPDATE `footballtable`.`players` SET `Name` = '"+ namea +"',`DateOfBirth` = '"+ doba +"',`Email` = '"+ emaila +"',`TeamID` = '"+ tm + "'WHERE `ID` = "+userID;
+        String savSQL1 = "UPDATE `footballtable`.`players` SET `Name` = '"+ nameb +"',`DateOfBirth` = '"+ dobb +"',`Email` = '"+ emailb +"',`TeamID` = '"+ tm + "'WHERE `ID` = "+finalID;
+        PreparedStatement st = connn.prepareStatement(savSQL);
+        PreparedStatement sta = connn.prepareStatement(savSQL1);
+        resSet = st.executeUpdate(savSQL);
+        resSet1 = sta.executeUpdate(savSQL1);
+        System.out.println(resSet);
+        System.out.println(resSet1);
+        connn.close();
+        saveInfo.setOpacity(0);
+        editInfo.setOpacity(1);
+
+        JOptionPane.showMessageDialog(null,
+                "Update saved successfully to database",
+                "Saved Successfully",
+                JOptionPane.INFORMATION_MESSAGE);
+    }
 
     @FXML
     void goBack(ActionEvent event) {
@@ -150,9 +152,9 @@ public class InfoPageController {
             name2.setText(rsa2.getString("Name"));
             email2.setText(rsa2.getString("Email"));
             dob2.setText(rsa2.getString("DateOfBirth"));
-            System.out.println("Written to labels");
+            System.out.println("Clicked the infobutton, did it work or is it still some buggy broken fucking shit fuck you eimantas");
         }
 
-            conn.close();
-        }
+        conn.close();
     }
+}
