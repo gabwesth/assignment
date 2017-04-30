@@ -12,6 +12,7 @@ import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import javax.swing.*;
+import java.awt.event.ActionListener;
 import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
@@ -59,7 +60,7 @@ public class TableController {
                 "You have entered the wrong data type \n"
                         + "into the Date of birth field \n"
                         + "Please enter an integer(YYYY-MM-DD)",
-                "NOW YOU FUCKED UP",
+                "YOU FUCKED UP",
                 JOptionPane.ERROR_MESSAGE);
     }
     void ErrorMessageTeam() //The dialogue box method for Team error
@@ -68,7 +69,7 @@ public class TableController {
                 "You have entered a duplicate team name \n"
                         + "into team field. \n"
                         + "Please enter a new team name",
-                "NOW YOU FUCKED UP",
+                "YOU FUCKED UP",
                 JOptionPane.ERROR_MESSAGE);
     }
 
@@ -88,7 +89,7 @@ public class TableController {
 
 
     @FXML
-    void SaveOnDB(ActionEvent event) {
+    public void SaveOnDB(ActionEvent event) {
         String p1name = NameP1.getText();
         String p2name = NameP2.getText();
         String p1email = EmailP1.getText();
@@ -184,5 +185,6 @@ public class TableController {
         }
 
     }
+
 
 }

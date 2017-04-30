@@ -71,8 +71,6 @@ public class InfoPageController {
         saveInfo.setOpacity(1);
         editInfo.setOpacity(0);
 
-        //VVVVVV  WHY DO THESE NOT WORK?? VVVVVVV
-
         name1.setEditable(true);
         email1.setEditable(true);
         dob1.setEditable(true);
@@ -92,25 +90,30 @@ public class InfoPageController {
         void saveInfoBtt(ActionEvent event) throws SQLException{ //This gives an SQL syntax error at line 100 and I've no idea how to fix it
 
            editInfo.setOpacity(1);
-           name1.getText();
-            email1.getText();
-            dob1.getText();
-            teamname.getText();
-            name2.getText();
-            email2.getText();
-            dob2.getText();
+           String namea = name1.getText();
+            String emaila = email1.getText();
+            String doba = dob1.getText();
+            String tm = teamname.getText();
+            String nameb = name2.getText();
+            String emailb = email2.getText();
+            String dobb = dob2.getText();
+            int resSet;
+            int resSet1;
             Connection connn = DBconnection.getConnection();
-            Statement state = connn.createStatement();
-            String savSQL = "UPDATE `footballtable`.`players` " +
-            "VALUES ('" + name1 + "', '" + dob1 + "', '" + email1 + "', NULL, '" + teamname + "'), ('" + name2 + "', '" + dob2 + "', '" + email2 + "', NULL, '" + teamname + "')";
-            int resSet = state.executeUpdate(savSQL);
+            String savSQL = "UPDATE `footballtable`.`players` SET `Name` = '"+ namea +"',`DateOfBirth` = '"+ doba +"',`Email` = '"+ emaila +"',`TeamID` = '"+ tm + "'WHERE `ID` = "+userID;
+            String savSQL1 = "UPDATE `footballtable`.`players` SET `Name` = '"+ nameb +"',`DateOfBirth` = '"+ dobb +"',`Email` = '"+ emailb +"',`TeamID` = '"+ tm + "'WHERE `ID` = "+finalID;
+            PreparedStatement st = connn.prepareStatement(savSQL);
+            PreparedStatement sta = connn.prepareStatement(savSQL1);
+            resSet = st.executeUpdate(savSQL);
+            resSet1 = sta.executeUpdate(savSQL1);
             System.out.println(resSet);
+            System.out.println(resSet1);
             connn.close();
             saveInfo.setOpacity(0);
-
-
-
-
+            JOptionPane.showMessageDialog(null,
+                    "Update saved successfully to database",
+                    "Saved Successfully",
+                    JOptionPane.INFORMATION_MESSAGE);
         }
 
     @FXML
@@ -127,6 +130,7 @@ public class InfoPageController {
                 null,options,options[1]);
             if(dialogue ==JOptionPane.YES_OPTION){
                 //DELETE TEAM FROM DATABASE
+                //Needs to set limit counter down 1?
             }*/
     }
     @FXML
@@ -155,9 +159,9 @@ public class InfoPageController {
         String query2 = ("SELECT `Name`,`DateOfBirth`,`Email`,`TeamID`,`ID` FROM `footballtable`.`players` WHERE `ID` = '" + finalID + "' AND `TeamID` = '" + chosenTeam + "'");
         ResultSet rsa2 = sta2.executeQuery(query2);
         if(rsa2.next()) {
-            name2.setText("Name: " + rsa2.getString("Name"));
-            email2.setText("Email: " + rsa2.getString("Email"));
-            dob2.setText("Date of Birth: " + rsa2.getString("DateOfBirth"));
+            name2.setText(rsa2.getString("Name"));
+            email2.setText(rsa2.getString("Email"));
+            dob2.setText(rsa2.getString("DateOfBirth"));
             System.out.println("Written to labels");
         }
 

@@ -6,15 +6,16 @@ import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Tab;
 
+import java.awt.event.ActionListener;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 
-public class UsePageMenuController{
+public class UsePageMenuController {
     Main scene = new Main();
     String tour = UsePageController.tour;
-
+    TableController tc = new TableController();
 
     @FXML
     private Button ScheduleBtt; //Ability to add results
@@ -31,6 +32,11 @@ public class UsePageMenuController{
 
     public void goBack(ActionEvent event){
         scene.openWindowAndClose(event,"UsePage.fxml","Select Tournament", 394, 251 );
+    }
+    @FXML
+    public void addNewTeam(ActionEvent event){
+        // add a new team
+        //tc.SaveOnDB(ActionEvent);
     }
 
     @FXML
