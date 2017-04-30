@@ -2,10 +2,12 @@ package FootBallTableTournament;
 
 import javafx.event.ActionEvent;
 import javafx.event.Event;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Tab;
 
+import javax.swing.*;
 import java.awt.event.ActionListener;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -22,13 +24,11 @@ public class UsePageMenuController {
     @FXML
     private Button BackBtt;
     @FXML
-    //FUCK JAVAFX
     private Button infoBtt; //Shows a list of teams that can be clicked on to display team info
     @FXML
     private Button StandingBtt; //Dialogue box/popup that shows a table of all teams and their GD, pts, and position
     @FXML
-    private Button addNewTeam;
-
+    public Button addTeam;
 
     public void goBack(ActionEvent event){
         scene.openWindowAndClose(event,"UsePage.fxml","Select Tournament", 394, 251 );
@@ -36,7 +36,7 @@ public class UsePageMenuController {
     @FXML
     public void addNewTeam(ActionEvent event){
         // add a new team
-        //tc.SaveOnDB(ActionEvent);
+        //tc.SaveOnDB();
     }
 
     @FXML

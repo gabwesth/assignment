@@ -117,23 +117,6 @@ public class InfoPageController {
         }
 
     @FXML
-    void deleteTeamBtt(ActionEvent event) throws SQLException{
-/*        Object[] options = {"Yes", "No"};
-           int dialogue = JOptionPane.showOptionDialog(
-
-                    null,
-                    "Do you wish to delete this team and \n"
-                            + "all information associated with this team?",
-                    "DELETE?",
-                    JOptionPane.YES_NO_OPTION,
-                    JOptionPane.QUESTION_MESSAGE,
-                null,options,options[1]);
-            if(dialogue ==JOptionPane.YES_OPTION){
-                //DELETE TEAM FROM DATABASE
-                //Needs to set limit counter down 1?
-            }*/
-    }
-    @FXML
     void goBack(ActionEvent event) {
         scene.openWindowAndClose(event, "UsePageMenu.fxml", "Welcome", 395, 251);
     }

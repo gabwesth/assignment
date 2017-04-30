@@ -12,6 +12,8 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ComboBox;
 import javafx.stage.Stage;
+
+import javax.swing.*;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -78,15 +80,29 @@ public class UsePageController {
     @FXML
     void DeleteTournament(ActionEvent event) throws SQLException
     {
-        chosenTournament = (String) TournamentsOption.getValue();
+        Object[] options = {"Yes", "No"};
+        int dialogue = JOptionPane.showOptionDialog(
 
-        Connection con = DBconnection.getConnection();
-        Statement st = con.createStatement();
-        String sql = ("DELETE FROM `footballtable`.`tournaments` WHERE `tournaments`.`Name` = '"+chosenTournament+"'");
-        st.executeUpdate(sql);
-        System.out.println(sql);
-        System.out.println(chosenTournament + " Tournament has been Deleted");
-        con.close();
+                null,
+                "Do you wish to delete this tournament and \n"
+                        + "all information associated with this tournament? \n"
+                        + "(Teams, players, games)",
+                "DELETE?",
+                JOptionPane.YES_NO_OPTION,
+                JOptionPane.QUESTION_MESSAGE,
+                null,options,options[1]);
+        if(dialogue ==JOptionPane.YES_OPTION){
+            chosenTournament = (String) TournamentsOption.getValue();
+
+            Connection con = DBconnection.getConnection();
+            Statement st = con.createStatement();
+            String sql = ("DELETE FROM `footballtable`.`tournaments` WHERE `tournaments`.`Name` = '"+chosenTournament+"'");
+            st.executeUpdate(sql);
+            System.out.println(sql);
+            System.out.println(chosenTournament + " Tournament has been Deleted");
+            con.close();
+        }
+
     }
 
 

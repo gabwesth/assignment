@@ -87,7 +87,6 @@ public class TableController {
         scene.openWindowAndClose(event,"FirstPage.fxml","Welcome!",395, 251 );
     }
 
-
     @FXML
     public void SaveOnDB(ActionEvent event) {
         String p1name = NameP1.getText();
