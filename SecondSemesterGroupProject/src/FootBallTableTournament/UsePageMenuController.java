@@ -1,14 +1,9 @@
 package FootBallTableTournament;
 
 import javafx.event.ActionEvent;
-import javafx.event.Event;
-import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.Tab;
 
-import javax.swing.*;
-import java.awt.event.ActionListener;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -82,4 +77,5 @@ public class UsePageMenuController {
                 }
     }
 }
+
 
